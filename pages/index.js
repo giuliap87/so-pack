@@ -1,5 +1,5 @@
 import Head from "next/head";
-import NavigationBar from "../components/Navbar/index";
+import MainNavbar from "../components/Navbar/mainNavbar";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
         <title>So pack!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavigationBar />
+      <MainNavbar />
     </div>
   );
 }
