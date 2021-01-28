@@ -5,7 +5,7 @@ function Packaging() {
   return (
     <div>
       <Head>
-        <title>Our Services - Packaging</title>
+      <title>So pack services - Packaging</title>
       </Head>
       <Navbar />
       <h1>Packaging</h1>

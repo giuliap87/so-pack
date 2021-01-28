@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -6,13 +8,26 @@ import styles from "./Navbar.module.css";
 import Link from "next/link";
 
 function NavigationBar() {
+  const [position, setPosition] = useState("top");
+
+  useEffect(() => {
+    document.addEventListener("scroll", (e) => {
+      let scrolled = document.scrollingElement.scrollTop;
+      if (scrolled >= 5) {
+        setPosition("moved");
+      } else {
+        setPosition("top");
+      }
+    });
+  }, [position]);
+
   return (
     <Navbar
       collapseOnSelect
       expand="lg"
       expand="md"
       sticky="top"
-      className={styles.navbar}
+      className={position != "top" ? styles.navbarScroll : styles.navbar}
     >
       <Container>
         <Link href="/" passHref>
@@ -22,7 +37,8 @@ function NavigationBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link href="#about">About</Nav.Link>
-            <NavDropdown title="Our Services" id="collasible-nav-dropdown">
+            <Nav.Link href="#services">Our Services</Nav.Link>
+            <NavDropdown id="collasible-nav-dropdown">
               <Link href="/services/packaging" passHref>
                 <NavDropdown.Item className={styles.dropdownItem}>
                   Packaging Components
@@ -37,6 +53,7 @@ function NavigationBar() {
                 </NavDropdown.Item>
               </Link>
             </NavDropdown>
+
             <Nav.Link href="#products">Products</Nav.Link>
             <Nav.Link href="#contacts">Contacts</Nav.Link>
           </Nav>
