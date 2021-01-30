@@ -5,7 +5,7 @@ function FinishedProduct() {
   return (
     <div>
       <Head>
-        <title>Our Services - Finished Products</title>
+        <title>So pack services - Finished Products</title>
       </Head>
       <Navbar />
       <h1>Finished Product</h1>

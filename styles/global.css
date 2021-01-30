@@ -8,6 +8,7 @@ html,
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -32,4 +33,5 @@ img {
   max-width: 100%;
   display: block;
 }
+
 

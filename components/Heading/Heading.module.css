@@ -1,0 +1,40 @@
+.heading {
+  font-weight: 700;
+  text-align: left;
+}
+
+.border {
+  height: 4px;
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+  .heading {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 668px) {
+  .border {
+    width: 250px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .heading {
+    font-size: 35px;
+  }
+  .border {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .heading {
+    font-size: 30px;
+  }
+}
