@@ -1,45 +1,36 @@
-.aboutSection {
-  background-color: rgb(207, 2, 2);
+.productSection {
   height: 100vh;
+  background-color: rgb(241, 245, 223);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  color: #fff;
 }
 
 .container {
   padding: 0 80px;
+  display: block;
+  width: 100vw;
 }
 
-.paragraph {
-  font-weight: 300;
+.carousel {
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 992px) {
-  .paragraph {
-    font-size: 18px;
-  }
-
   .container {
     padding: 0 70px;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .paragraph {
-    font-size: 16px;
-  }
   .container {
     padding: 0 60px;
   }
 }
 
 @media only screen and (max-width: 481px) {
-  .aboutSection {
+  .productSection {
     height: 70vh;
-  }
-
-  .paragraph {
-    font-size: 13px;
   }
 }

@@ -14,20 +14,6 @@
   margin: 0 80px;
 }
 
-.heading {
-  font-weight: 700;
-  text-align: left;
-}
-
-.border {
-  height: 4px;
-  width: 400px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  background-color: rgb(207, 2, 2);
-  border-radius: 2px;
-}
-
 .itemsContainer {
   margin: 0 auto;
   display: flex;
@@ -54,37 +40,34 @@
   text-transform: uppercase;
   text-align: center;
 
-  transition: background-color 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .item:hover {
   background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.item:active {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 1201px) {
+  .item {
+    height: 300px;
+    width: 300px;
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
-  .heading {
-    font-size: 40px;
-  }
-
   .container {
     margin: 0 70px;
   }
 }
 
-@media only screen and (max-width: 668px) {
-  .border {
-    width: 250px;
-    margin-top: 10px;
-  }
-}
-
 @media only screen and (max-width: 576px) {
-  .heading {
-    font-size: 35px;
-  }
-  .border {
-    width: 200px;
-  }
   .container {
     margin: 0 60px;
   }
@@ -97,12 +80,14 @@
 }
 
 @media only screen and (max-width: 481px) {
-  .heading {
-    font-size: 30px;
+  .serviceSection{
+    height: 70vh;
   }
   .item {
-    font-size: 12px;
+    font-size: 10px;
     margin: 10px;
+    height: 110px;
+    width: 110px;
   }
   .itemsContainer {
     flex-direction: column;

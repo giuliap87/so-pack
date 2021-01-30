@@ -1,0 +1,18 @@
+import styles from "./Products.module.css";
+import Heading from "../Heading/Heading";
+import Carousel from "./Carousel/Coursel";
+
+function Products() {
+  return (
+    <section id="products" className={styles.productSection}>
+      <div className={styles.container}>
+        <Heading color="#000">Our products</Heading>
+        <div className={styles.carousel}>
+          <Carousel />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Products;

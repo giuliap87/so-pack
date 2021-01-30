@@ -1,36 +1,42 @@
-.homeSection{
-    background-color: rgb(216, 201, 135);
-    height: calc(100vh - 61px);
-    position: relative;
+.homeSection {
+  background-color: rgb(216, 201, 135);
+  height: calc(100vh - 61px);
+  position: relative;
 }
 
-.logo{
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
 
 .logo span {
-    color: red;
+  color: red;
 }
 
 .scrollDown {
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translate(50%, 0);
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    transition: color .4s ease;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 0);
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  transition: color 0.4s ease;
 }
 
-.scrollDown:hover{
-    color: red;
+.scrollDown:hover {
+  color: red;
 }
 
 .scrollDown svg {
-    font-size: 80px;
+  font-size: 80px;
+}
+
+@media only screen and (max-width: 481px) {
+  .homeSection {
+    height: 70vh;
+  }
 }

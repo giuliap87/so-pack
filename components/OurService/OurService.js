@@ -1,12 +1,12 @@
 import styles from "./OurService.module.css";
+import Heading from "../Heading/Heading";
 import Link from "next/link";
 
 function OurService() {
   return (
     <section id="services" className={styles.serviceSection}>
       <div className={styles.container}>
-        <h1 className={styles.heading}>Our services</h1>
-        <div className={styles.border}></div>
+        <Heading color="rgb(207, 2, 2)">Our services</Heading>
         <div className={styles.itemsContainer}>
           <Link href="/services/finished-product" passHref>
             <a className={styles.item}>Full Service Projects</a>
