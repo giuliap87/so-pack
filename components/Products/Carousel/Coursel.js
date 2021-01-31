@@ -6,34 +6,34 @@ function Coursel() {
     <div>
       <Carousel className={styles.carousel}>
         <Carousel.Item className={styles.item}>
-          <img src={"images/first.png"} alt="First slide" />
+          <img src={"images/1.png"} alt="First slide" />
           <Carousel.Caption>
             <h3>First slide label</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={styles.item}>
-          <img src={"images/second.png"} alt="Third slide" />
+          <img src={"images/2.png"} alt="Third slide" />
 
           <Carousel.Caption>
             <h3>Second slide label</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={styles.item}>
-          <img src={"images/third.png"} alt="Third slide" />
+          <img src={"images/3.png"} alt="Third slide" />
 
           <Carousel.Caption>
             <h3>Third slide label</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={styles.item}>
-          <img src={"images/fourth.png"} alt="Fourth slide" />
+          <img src={"images/4.png"} alt="Fourth slide" />
 
           <Carousel.Caption>
             <h3>Fourth slide label</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item className={styles.item}>
-          <img src={"images/fifth.png"} alt="Fifth slide" />
+          <img src={"images/5.png"} alt="Fifth slide" />
 
           <Carousel.Caption>
             <h3>Fifth slide label</h3>

@@ -25,7 +25,6 @@ function NavigationBar() {
     <Navbar
       collapseOnSelect
       expand="lg"
-      expand="md"
       sticky="top"
       className={position != "top" ? styles.navbarScroll : styles.navbar}
     >
