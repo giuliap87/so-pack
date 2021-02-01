@@ -1,6 +1,6 @@
 import styles from "./Products.module.css";
 import Heading from "../Heading/Heading";
-import Carousel from "./Carousel/Coursel";
+import Carousel from "./Carousel/CarouselComponent";
 
 function Products() {
   return (
