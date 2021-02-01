@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Navbar from "../../components/Navbar/secondaryNavbar";
+import FinishedProductSection from "../../components/FinishProduct/FinishProduct";
+import Footer from "../../components/Footer/Footer";
 
 function FinishedProduct() {
   return (
@@ -8,7 +10,8 @@ function FinishedProduct() {
         <title>So pack services - Finished Products</title>
       </Head>
       <Navbar />
-      <h1>Finished Product</h1>
+      <FinishedProductSection />
+      <Footer />
     </div>
   );
 }
