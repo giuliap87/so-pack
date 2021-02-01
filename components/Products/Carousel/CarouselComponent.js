@@ -1,7 +1,7 @@
-import styles from "./Carousel.module.css";
+import styles from "./CarouselComponent.module.css";
 import Carousel from "react-bootstrap/Carousel";
 
-function Coursel() {
+function CarouselComponent() {
   return (
     <div>
       <Carousel className={styles.carousel}>
@@ -44,4 +44,4 @@ function Coursel() {
   );
 }
 
-export default Coursel;
+export default CarouselComponent;
