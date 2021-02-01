@@ -1,11 +1,12 @@
 import styles from "./Footer.module.css";
+import Link from "next/link";
 
 const links = [
   { name: "home", path: "/" },
-  { name: "about", path: "#about" },
-  { name: "our services", path: "#services" },
-  { name: "products", path: "#products" },
-  { name: "contacts", path: "#contacts" },
+  { name: "about", path: "/#about" },
+  { name: "our services", path: "/#services" },
+  { name: "products", path: "/#products" },
+  { name: "contacts", path: "/#contacts" },
   { name: "packaging components", path: "/services/packaging" },
   { name: "full service projects", path: "/services/finished-product" },
 ];
@@ -16,11 +17,15 @@ function Footer() {
       <ul className={styles.footerList}>
         {links.map((link) => (
           <li>
-            <a href={link.path}>{link.name}</a>
+            <Link href={link.path} passHref>
+              <a>{link.name}</a>
+            </Link>
           </li>
         ))}
       </ul>
-      <p className={styles.copyright}>Copyright So Pack {new Date().getFullYear()}</p>
+      <p className={styles.copyright}>
+        Copyright So Pack {new Date().getFullYear()}
+      </p>
     </footer>
   );
 }
