@@ -5,9 +5,11 @@
   justify-content: center;
 }
 
-.item img{
-  height: 350px;
-  width: 600px;
+.item {
+  img {
+    height: 350px;
+    width: 600px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -17,13 +19,17 @@
     justify-content: center;
   }
 
-  .item img {
-    height: 300px;
-    width: 500px;
+  .item {
+    img {
+      height: 300px;
+      width: 500px;
+    }
   }
 
-  .item h3 {
-    font-size: 16px;
+  .item {
+    h3 {
+      font-size: 16px;
+    }
   }
 }
 
@@ -34,9 +40,11 @@
     justify-content: center;
   }
 
-  .item img {
-    height: 200px;
-    width: 400px;
+  .item {
+    img {
+      height: 200px;
+      width: 400px;
+    }
   }
 }
 
@@ -47,8 +55,10 @@
     justify-content: center;
   }
 
-  .item img {
-    height: 150px;
-    width: 300px;
+  .item {
+    img {
+      height: 150px;
+      width: 300px;
+    }
   }
 }

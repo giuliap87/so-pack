@@ -1,7 +1,9 @@
+@import "../../styles/mixins";
+
 .footer {
-  background-color: rgb(207, 2, 2);
+  @include backGroundColorPrimary;
+  @include white;
   height: 80px;
-  color: #fff;
   text-transform: uppercase;
   padding: 30px 10px 0 10px;
 
@@ -17,10 +19,9 @@
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
-}
-
-.footerList a {
-  color: #fff;
+  a {
+    @include white;
+  }
 }
 
 .copyright {

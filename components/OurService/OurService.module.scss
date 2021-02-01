@@ -1,8 +1,9 @@
-.serviceSection {
-  height: 100vh;
-  background-color: rgb(235, 235, 235);
-  color: rgb(207, 2, 2);
+@import "../../styles/mixins";
 
+.serviceSection {
+  @include primaryColor;
+  background-color: #ccc;;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,11 +20,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.itemsContainer a {
-  color: rgb(207, 2, 2);
-  text-decoration: none;
+  a {
+    @include primaryColor;
+    text-decoration: none;
+  }
 }
 
 .item {
@@ -80,7 +80,7 @@
 }
 
 @media only screen and (max-width: 481px) {
-  .serviceSection{
+  .serviceSection {
     height: 70vh;
   }
   .item {

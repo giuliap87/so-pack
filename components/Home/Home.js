@@ -1,4 +1,4 @@
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 function HomePageSection() {

@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .sectionPacking {
   margin: 80px 0;
   display: flex;
@@ -5,9 +7,11 @@
   justify-content: flex-start;
 }
 
-.textSpan {
-  color: rgb(207, 3, 3);
-  font-weight: 700;
+.description {
+  span {
+    @include primaryColor;
+    font-weight: 700;
+  }
 }
 
 .cardsContainer {

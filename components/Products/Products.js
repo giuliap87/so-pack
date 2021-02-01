@@ -1,4 +1,4 @@
-import styles from "./Products.module.css";
+import styles from "./Products.module.scss";
 import Heading from "../Heading/Heading";
 import Carousel from "./Carousel/CarouselComponent";
 

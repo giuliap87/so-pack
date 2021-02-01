@@ -1,6 +1,4 @@
-import styles from "./Card.module.css";
-import Button from "@material-ui/core/Button";
-import Link from "next/link";
+import styles from "./Card.module.scss";
 
 function MyCard({ id, title, showOverlay }) {
   return (

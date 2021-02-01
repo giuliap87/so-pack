@@ -24,6 +24,10 @@ h2 {
   font-size: 40px;
 }
 
+h3 {
+  font-size: 28px;
+}
+
 p {
   font-size: 26px;
   line-height: 1.4;
@@ -32,6 +36,10 @@ p {
 img {
   max-width: 100%;
   display: block;
+}
+
+a {
+  text-decoration: none;
 }
 
 

@@ -1,5 +1,5 @@
 import Heading from "../Heading/Heading";
-import styles from "./Packing.module.css";
+import styles from "./Packing.module.scss";
 import Card from "../Card/Card";
 import Overlay from "./Overlay";
 
@@ -70,7 +70,7 @@ function Packing() {
           Thanks to our industry partners for glass, metal working, polymers
           injection and mold development, we can manage the develoment of one of
           several components for perfumery and cosmetic.
-          <span className={styles.textSpan}> You can choose from:</span>
+          <span> You can choose from:</span>
         </p>
         <div className={styles.cardsContainer}>
           {details.map((card) => (

@@ -1,14 +1,13 @@
+@import "../../styles/mixins";
+
 .aboutSection {
-  background-color: rgb(207, 2, 2);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: #fff;
+  @include backGroundColorPrimary;
+  @include sectionStyle;
+  @include white;
 }
 
 .container {
-  padding: 0 80px;
+  @include containerStyle;
 }
 
 .paragraph {

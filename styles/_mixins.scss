@@ -1,0 +1,50 @@
+// colors
+
+@mixin primaryColor {
+  color: rgb(207, 2, 2);
+}
+
+@mixin primaryColorDark {
+  color: rgb(128, 3, 3);
+}
+
+@mixin backGroundColorPrimary {
+  background-color: rgb(207, 2, 2);
+}
+
+@mixin backGroundColorWhite {
+  background-color: rgb(255, 255, 255);
+}
+
+@mixin white {
+  color: #fff;
+}
+
+@mixin black {
+  color: #000;
+}
+
+//box-shadows
+
+@mixin card-box-shadow {
+  box-shadow: 1px 2px 5px 0px rgb(0 0 0 / 50%);
+}
+
+//containers styles
+
+@mixin containerStyle {
+  padding: 0 80px;
+}
+
+@mixin sectionStyle {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+//border-radius
+
+@mixin card-border-radius {
+  border-radius: 5px;
+}

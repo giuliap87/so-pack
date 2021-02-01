@@ -1,4 +1,4 @@
-import styles from "./OurService.module.css";
+import styles from "./OurService.module.scss";
 import Heading from "../Heading/Heading";
 import Link from "next/link";
 

@@ -1,4 +1,4 @@
-import styles from "./About.module.css";
+import styles from "./About.module.scss";
 import Heading from "../Heading/Heading";
 
 function About() {

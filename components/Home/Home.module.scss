@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .homeSection {
   background-color: rgb(216, 201, 135);
   height: calc(100vh - 61px);
@@ -9,11 +11,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
-}
+  @include white;
 
-.logo span {
-  color: red;
+  span {
+    @include primaryColor;
+  }
 }
 
 .scrollDown {
@@ -23,16 +25,16 @@
   transform: translate(50%, 0);
   background-color: transparent;
   border: none;
-  color: #fff;
+  @include white;
   transition: color 0.4s ease;
+
+  svg {
+    font-size: 80px;
+  }
 }
 
 .scrollDown:hover {
-  color: red;
-}
-
-.scrollDown svg {
-  font-size: 80px;
+  @include primaryColor;
 }
 
 @media only screen and (max-width: 481px) {

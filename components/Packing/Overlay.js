@@ -1,4 +1,4 @@
-import styles from "./Overlay.module.css";
+import styles from "./Overlay.module.scss";
 import Carousel from "../Carousel/MyCarousel";
 import CloseIcon from "@material-ui/icons/Close";
 

@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-import styles from "./Navbar.module.css";
+import styles from "./Navbar.module.scss";
 import Link from "next/link";
 
 function NavigationBar() {

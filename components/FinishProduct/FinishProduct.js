@@ -1,4 +1,4 @@
-import styles from "./FinishProduct.module.css";
+import styles from "./FinishProduct.module.scss";
 import Heading from "../Heading/Heading";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
