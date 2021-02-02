@@ -10,10 +10,12 @@ function Packaging() {
       <Head>
         <title>So pack services - Packaging</title>
       </Head>
-      <Navbar />
-      <Description />
-      <Packing />
-      <Footer />
+      <div style={{minHeight: "calc(100vh - 80px)"}}>
+        <Navbar />
+        <Description />
+        <Packing />
+      </div>
+        <Footer />
     </div>
   );
 }

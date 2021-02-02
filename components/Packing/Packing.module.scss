@@ -2,8 +2,6 @@
 
 .container {
   @include containerStyle;
-  height: 100vh;
-  margin: 80px 0 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -13,50 +11,31 @@
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 30px auto 50px auto;
   justify-content: center;
   align-items: center;
 }
 
 @include tablet-landscape {
   .container {
-    padding: 0 70px;
+    padding: 0 60px;
   }
 }
 
 @include tablet-portrait {
-  .description {
-    font-size: 22px;
+  .cardsContainer {
+    flex-wrap: nowrap;
   }
 }
 
 @include big-phone {
-  .text {
-    width: 400px;
-    position: relative;
-    top: 0;
-  }
   .container {
-    padding: 0 60px;
-  }
-
-  .cardsContainer {
-    flex-wrap: nowrap;
-    width: 900px;
-  }
-  .description {
-    font-size: 18px;
+    padding: 0 10px;
   }
 }
 
 @include phone {
   .container {
     padding: 0 10px;
-  }
-  .aboutSection {
-    height: 70vh;
-  }
-  .description {
-    font-size: 16px;
   }
 }

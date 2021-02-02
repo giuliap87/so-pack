@@ -1,31 +1,22 @@
 @import "../../styles/mixins";
 
 .finishedProductSection {
-  margin: 80px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
-.description {
-  font-weight: 300;
-  span {
-    color: $primaryColor;
-    font-weight: 300;
-  }
+  margin: 80px 0;
 }
 
 .container {
   @include containerStyle;
-  height: calc(100vh - 80px);
+}
+.description {
+  font-weight: 300;
+  span {
+    color: $primaryColor;
+    font-weight: 400;
+  }
 }
 
 .scrollDown {
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  transform: translate(50%, 0);
+  margin-left: 45%;
   background-color: transparent;
   border: none;
   color: $primaryColor;
@@ -40,89 +31,10 @@
   font-size: 80px;
 }
 
-.process {
-  padding: 80px 100%;
-  background-color: #eee;
-  padding-top: 50px;
-}
-
-.processTitle {
-  color: $primaryColor;
-  font-weight: 300;
-  font-size: 40px;
-  padding-bottom: 30px;
-}
-
-.stepsContainer {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-.step {
-  background-color: $primaryColor;
-  height: 300px;
-  width: 300px;
-  margin: 10px;
-  text-align: center;
-  position: relative;
-  border-radius: 10px;
-
-  transition: all 0.4s ease-in-out;
-}
-
-.title,
-.stepDescription {
-  color: $white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  padding: 15px;
-
-  transition: all 0.4s ease-in-out;
-}
-
-.title {
-  text-transform: uppercase;
-  opacity: 1;
-}
-
-.stepDescription {
-  font-size: 15px;
-  opacity: 0;
-}
-
-.step:hover .title {
-  opacity: 0;
-}
-
-.step:hover .stepDescription {
-  opacity: 1;
-}
-
-.step:active .title {
-  opacity: 0;
-}
-
-.step:active .stepDescription {
-  opacity: 1;
-}
-
-
 @include tablet-landscape {
   .container {
     padding: 0 70px;
   }
-
-  .title {
-    font-size: 20px;
-  }
-
-  .stepsContainer {
-    grid-template-columns: auto auto;
-  }
-
   .description {
     font-size: 22px;
   }
@@ -132,36 +44,18 @@
   .description {
     font-size: 20px;
   }
-
-  .step {
-    height: 250px;
-    width: 250px;
-  }
-
-  .stepDescription {
-    font-size: 12px;
-  }
 }
 
 @include big-phone {
   .container {
     padding: 0 60px;
   }
-  .step {
-    height: 200px;
-    width: 200px;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-
   .description {
     font-size: 18px;
   }
 
-  .processTitle {
-    font-size: 35px;
+  .scrollDown {
+    display: none;
   }
 }
 
@@ -169,22 +63,7 @@
   .container {
     padding: 0 10px;
   }
-  .stepsContainer {
-    grid-template-columns: auto;
-  }
   .description {
     font-size: 16px;
-  }
-
-  .container{
-    height: calc(70vh - 80px);
-  }
-
-  .scrollDown {
-    display: none;
-  }
-
-  .processTitle{
-    font-size: 30px;
   }
 }
