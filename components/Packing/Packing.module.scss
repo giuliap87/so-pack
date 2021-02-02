@@ -1,54 +1,62 @@
 @import "../../styles/mixins";
 
-.sectionPacking {
-  margin: 80px 0;
+.container {
+  @include containerStyle;
+  height: 100vh;
+  margin: 80px 0 0 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-}
-
-.description {
-  span {
-    @include primaryColor;
-    font-weight: 700;
-  }
+  flex-direction: column;
+  overflow-x: scroll;
 }
 
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 }
 
-.container {
-  padding: 0 80px;
-}
-
-@media only screen and (max-width: 992px) {
+@include tablet-landscape {
   .container {
     padding: 0 70px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@include tablet-portrait {
   .description {
     font-size: 22px;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
+  .text {
+    width: 400px;
+    position: relative;
+    top: 0;
+  }
   .container {
     padding: 0 60px;
   }
+
+  .cardsContainer {
+    flex-wrap: nowrap;
+    width: 900px;
+  }
+  .description {
+    font-size: 18px;
+  }
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .container {
     padding: 0 10px;
   }
   .aboutSection {
     height: 70vh;
+  }
+  .description {
+    font-size: 16px;
   }
 }

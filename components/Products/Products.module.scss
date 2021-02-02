@@ -1,13 +1,12 @@
+@import "../../styles/mixins";
+
 .productSection {
-  height: 100vh;
+  @include sectionStyle;
   background-color: rgb(241, 245, 223);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 
 .container {
-  padding: 0 80px;
+  @include containerStyle;
   display: block;
   width: 100vw;
 }
@@ -17,19 +16,19 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 992px) {
+@include tablet-landscape {
   .container {
     padding: 0 70px;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
   .container {
     padding: 0 60px;
   }
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .productSection {
     height: 70vh;
   }

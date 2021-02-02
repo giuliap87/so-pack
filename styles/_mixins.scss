@@ -1,28 +1,12 @@
-// colors
+// colors variables
 
-@mixin primaryColor {
-  color: rgb(207, 2, 2);
-}
+$primaryColor: rgb(207, 2, 2);
+$primaryColorDark: rgb(128, 3, 3);
+$white: #fff;
+$black: #000;
 
-@mixin primaryColorDark {
-  color: rgb(128, 3, 3);
-}
-
-@mixin backGroundColorPrimary {
-  background-color: rgb(207, 2, 2);
-}
-
-@mixin backGroundColorWhite {
-  background-color: rgb(255, 255, 255);
-}
-
-@mixin white {
-  color: #fff;
-}
-
-@mixin black {
-  color: #000;
-}
+$titleLineHeight: 130%;
+$pLineHeight: 140%;
 
 //box-shadows
 
@@ -40,11 +24,43 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
 //border-radius
 
 @mixin card-border-radius {
   border-radius: 5px;
+}
+
+// media queries
+
+@mixin big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1201px) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin tablet-portrait {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin big-phone {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: 481px) {
+    @content;
+  }
 }

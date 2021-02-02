@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 .container {
-  @include backGroundColorWhite;
+  background-color: $white;
   @include card-box-shadow;
   @include card-border-radius;
   position: fixed;
@@ -24,39 +24,39 @@
 
 .description {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@include tablet-portrait {
   .container {
     padding: 30px 50px;
     margin: 50px;
   }
 
   .description {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
   .container {
     top: 60px;
     padding: 30px 30px;
     margin: 30px;
   }
   .description {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .container {
     top: 60px;
     padding: 20px 20px;
     margin: 20px;
   }
   .description {
-    font-size: 14px;
+    font-size: 12px;
   }
 }

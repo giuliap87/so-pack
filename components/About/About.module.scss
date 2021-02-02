@@ -1,9 +1,9 @@
 @import "../../styles/mixins";
 
 .aboutSection {
-  @include backGroundColorPrimary;
   @include sectionStyle;
-  @include white;
+  background-color: $primaryColor;
+  color: $white;
 }
 
 .container {
@@ -11,20 +11,19 @@
 }
 
 .paragraph {
-  font-weight: 300;
+  font-weight: 100;
 }
 
-@media only screen and (max-width: 992px) {
+@include tablet-landscape {
   .paragraph {
     font-size: 18px;
   }
-
   .container {
     padding: 0 70px;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
   .paragraph {
     font-size: 16px;
   }
@@ -33,7 +32,7 @@
   }
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .aboutSection {
     height: 70vh;
   }

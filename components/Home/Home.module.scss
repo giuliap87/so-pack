@@ -11,10 +11,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @include white;
+  color: $white;
 
   span {
-    @include primaryColor;
+    color: $primaryColor;
   }
 }
 
@@ -25,7 +25,7 @@
   transform: translate(50%, 0);
   background-color: transparent;
   border: none;
-  @include white;
+  color: $white;
   transition: color 0.4s ease;
 
   svg {
@@ -34,10 +34,10 @@
 }
 
 .scrollDown:hover {
-  @include primaryColor;
+  color: $primaryColor;
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .homeSection {
     height: 70vh;
   }

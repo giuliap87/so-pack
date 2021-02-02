@@ -1,8 +1,8 @@
 @import "../../styles/mixins";
 
 .footer {
-  @include backGroundColorPrimary;
-  @include white;
+  background-color: $primaryColor;
+  color: $white;
   height: 80px;
   text-transform: uppercase;
   padding: 30px 10px 0 10px;
@@ -20,7 +20,7 @@
   align-items: center;
   list-style: none;
   a {
-    @include white;
+   color: $white;
   }
 }
 
@@ -30,13 +30,13 @@
   text-transform: capitalize;
 }
 
-@media only screen and (max-width: 992px) {
+@include tablet-landscape {
   .footer {
     font-size: 12px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@include tablet-portrait {
   .footer {
     font-size: 10px;
   }
@@ -46,7 +46,7 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
   .footer {
     height: 100px;
     font-size: 8px;

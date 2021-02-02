@@ -1,0 +1,33 @@
+@import "../../../styles/mixins";
+
+.description {
+  font-weight: 300;
+  span {
+    color: $primaryColor;
+    font-weight: 400;
+  }
+}
+
+@include tablet-portrait {
+  .description {
+    font-size: 22px;
+  }
+}
+
+@include big-phone {
+  .text {
+    width: 400px;
+    position: relative;
+    top: 0;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+@include phone {
+  .description {
+    font-size: 16px;
+  }
+}

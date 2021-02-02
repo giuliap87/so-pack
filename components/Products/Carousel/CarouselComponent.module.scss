@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .carousel {
   max-width: 600px;
   display: flex;
@@ -12,7 +14,7 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@include tablet-portrait {
   .carousel {
     width: 500px;
     display: flex;
@@ -33,7 +35,7 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
   .carousel {
     width: 400px;
     display: flex;
@@ -48,7 +50,7 @@
   }
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .carousel {
     width: 300px;
     display: flex;

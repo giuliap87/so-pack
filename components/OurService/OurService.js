@@ -9,10 +9,14 @@ function OurService() {
         <Heading color="rgb(207, 2, 2)">Our services</Heading>
         <div className={styles.itemsContainer}>
           <Link href="/services/finished-product" passHref>
-            <a className={styles.item}>Full Service Projects</a>
+            <a className={styles.item}>
+              Full Service <br /> Projects
+            </a>
           </Link>
           <Link href="/services/packaging" passHref>
-            <a className={styles.item}>Packaging Components</a>
+            <a className={styles.item}>
+              Packaging <br /> Components
+            </a>
           </Link>
         </div>
       </div>

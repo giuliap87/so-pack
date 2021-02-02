@@ -1,18 +1,18 @@
 @import "../../styles/mixins";
 
 .finishedProductSection {
-  margin-top: 80px;
+  margin: 80px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   overflow: hidden;
 }
 
 .description {
+  font-weight: 300;
   span {
-    @include primaryColor;
-    font-weight: 700;
+    color: $primaryColor;
+    font-weight: 300;
   }
 }
 
@@ -28,12 +28,12 @@
   transform: translate(50%, 0);
   background-color: transparent;
   border: none;
-  @include primaryColor;
+  color: $primaryColor;
   transition: color 0.4s ease;
 }
 
 .scrollDown:hover {
-  @include primaryColorDark;
+  color: $primaryColorDark;
 }
 
 .scrollDown svg {
@@ -47,8 +47,8 @@
 }
 
 .processTitle {
-  @include primaryColor;
-  font-weight: 700;
+  color: $primaryColor;
+  font-weight: 300;
   font-size: 40px;
   padding-bottom: 30px;
 }
@@ -59,7 +59,7 @@
 }
 
 .step {
-  @include backGroundColorPrimary;
+  background-color: $primaryColor;
   height: 300px;
   width: 300px;
   margin: 10px;
@@ -72,7 +72,7 @@
 
 .title,
 .stepDescription {
-  @include white;
+  color: $white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -109,10 +109,8 @@
   opacity: 1;
 }
 
-@media only screen and (max-width: 1201px) {
-}
 
-@media only screen and (max-width: 992px) {
+@include tablet-landscape {
   .container {
     padding: 0 70px;
   }
@@ -124,11 +122,15 @@
   .stepsContainer {
     grid-template-columns: auto auto;
   }
-}
 
-@media only screen and (max-width: 768px) {
   .description {
     font-size: 22px;
+  }
+}
+
+@include tablet-portrait {
+  .description {
+    font-size: 20px;
   }
 
   .step {
@@ -141,7 +143,7 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
   .container {
     padding: 0 60px;
   }
@@ -149,13 +151,40 @@
     height: 200px;
     width: 200px;
   }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .processTitle {
+    font-size: 35px;
+  }
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .container {
     padding: 0 10px;
   }
   .stepsContainer {
     grid-template-columns: auto;
+  }
+  .description {
+    font-size: 16px;
+  }
+
+  .container{
+    height: calc(70vh - 80px);
+  }
+
+  .scrollDown {
+    display: none;
+  }
+
+  .processTitle{
+    font-size: 30px;
   }
 }
