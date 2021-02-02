@@ -1,4 +1,3 @@
-import Heading from "../Heading/Heading";
 import styles from "./Packing.module.scss";
 import Card from "../Card/Card";
 import Overlay from "./Overlay";
@@ -61,17 +60,17 @@ function Packing() {
 
   return (
     <div className={styles.container}>
-        <div className={styles.cardsContainer}>
-          {details.map((card) => (
-            <Card
-              className={styles.card}
-              key={card.title}
-              id={card.id}
-              title={card.title}
-              showOverlay={showOverlay}
-            />
-          ))}
-        </div>
+      <div className={styles.cardsContainer}>
+        {details.map((card) => (
+          <Card
+            className={styles.card}
+            key={card.title}
+            id={card.id}
+            title={card.title}
+            showOverlay={showOverlay}
+          />
+        ))}
+      </div>
       {isOverlay && (
         <Overlay
           closeOverlay={closeOverlay}
