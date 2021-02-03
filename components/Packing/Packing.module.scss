@@ -1,0 +1,41 @@
+@import "../../styles/mixins";
+
+.container {
+  @include containerStyle;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto 50px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@include tablet-landscape {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+@include tablet-portrait {
+  .cardsContainer {
+    flex-wrap: nowrap;
+  }
+}
+
+@include big-phone {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@include phone {
+  .container {
+    padding: 0 10px;
+  }
+}

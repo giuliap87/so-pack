@@ -1,5 +1,4 @@
-import Heading from "../Heading/Heading";
-import styles from "./Packing.module.css";
+import styles from "./Packing.module.scss";
 import Card from "../Card/Card";
 import Overlay from "./Overlay";
 
@@ -48,49 +47,34 @@ const details = [
   },
 ];
 
-function Packing() {
-  const [isOverlay, setIsOverlay] = useState(false);
-
-  function showOverlay() {
-    setIsOverlay(!isOverlay);
+function Packing({ toggleOverlay, closeOverlay, isOverlay }) {
+  function setOverlay() {
+    toggleOverlay();
   }
-
-  function closeOverlay() {
-    setIsOverlay(false);
+  function close() {
+    closeOverlay();
   }
 
   return (
-    <section className={styles.sectionPacking}>
+    <div className={styles.container}>
       <div
-        className={styles.container}
+        className={styles.cardsContainer}
         style={isOverlay ? { filter: "blur(5px)" } : {}}
       >
-        <Heading color="rgb(207, 3, 3)">Packaging Components</Heading>
-        <p className={styles.description}>
-          Thanks to our industry partners for glass, metal working, polymers
-          injection and mold development, we can manage the develoment of one of
-          several components for perfumery and cosmetic.
-          <span className={styles.textSpan}> You can choose from:</span>
-        </p>
-        <div className={styles.cardsContainer}>
-          {details.map((card) => (
-            <Card
-              className={styles.card}
-              key={card.title}
-              id={card.id}
-              title={card.title}
-              showOverlay={showOverlay}
-            />
-          ))}
-        </div>
+        {details.map((card) => (
+          <Card
+            className={styles.card}
+            key={card.title}
+            id={card.id}
+            title={card.title}
+            setOverlay={setOverlay}
+          />
+        ))}
       </div>
       {isOverlay && (
-        <Overlay
-          closeOverlay={closeOverlay}
-          description={details[0].description}
-        />
+        <Overlay close={close} description={details[0].description} />
       )}
-    </section>
+    </div>
   );
 }
 

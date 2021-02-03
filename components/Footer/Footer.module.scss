@@ -1,0 +1,79 @@
+@import "../../styles/mixins";
+
+.footer {
+  background-color: $primaryColor;
+  color: $white;
+  height: 200px;
+  text-transform: uppercase;
+  padding: 30px 20px 0 20px;
+
+  display: flex;
+  bottom: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 14px;
+
+  h6 {
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $black;
+  }
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.contactDetails {
+  ul {
+    list-style: none;
+    text-transform: capitalize;
+  }
+  a:hover,
+  a:active {
+    color: $black;
+  }
+}
+
+.copyright {
+  margin-top: 35px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $black;
+}
+
+@include tablet-landscape {
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@include tablet-portrait {
+  .footer {
+    font-size: 10px;
+  }
+}
+
+@include big-phone {
+  .logo {
+    display: none;
+  }
+}
+
+@include phone {
+  .footer {
+    flex-direction: column;
+    height: 100%;
+  }
+}

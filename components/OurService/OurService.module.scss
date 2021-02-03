@@ -1,17 +1,16 @@
-.serviceSection {
-  height: 100vh;
-  background-color: rgb(235, 235, 235);
-  color: rgb(207, 2, 2);
+@import "../../styles/mixins";
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.serviceSection {
+  @include sectionStyle;
+  color: $primaryColor;
+  background-color: #ccc;
 }
 
 .container {
+  @include containerStyle;
   display: block;
   width: 100vw;
-  margin: 0 80px;
+  // margin: 0 80px;
 }
 
 .itemsContainer {
@@ -19,16 +18,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.itemsContainer a {
-  color: rgb(207, 2, 2);
-  text-decoration: none;
+  a {
+    color: $primaryColor;
+    text-decoration: none;
+  }
 }
 
 .item {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 20px;
@@ -36,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: center;
 
@@ -53,7 +51,7 @@
   box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
-@media only screen and (min-width: 1201px) {
+@include big-desktop-up {
   .item {
     height: 300px;
     width: 300px;
@@ -61,15 +59,20 @@
   }
 }
 
-@media only screen and (max-width: 992px) {
+@include tablet-landscape {
   .container {
-    margin: 0 70px;
+    padding: 0 70px;
+  }
+
+  .item {
+    height: 200px;
+    width: 200px;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@include big-phone {
   .container {
-    margin: 0 60px;
+    padding: 0 60px;
   }
 
   .item {
@@ -79,8 +82,8 @@
   }
 }
 
-@media only screen and (max-width: 481px) {
-  .serviceSection{
+@include phone {
+  .serviceSection {
     height: 70vh;
   }
   .item {

@@ -1,0 +1,40 @@
+@import "../../../styles/mixins";
+
+.container {
+  @include containerStyle;
+  margin: 80px 0 0 0;
+}
+
+.description {
+  font-weight: 300;
+  span {
+    color: $primaryColor;
+    font-weight: 400;
+  }
+}
+
+@include tablet-portrait {
+  .description {
+    font-size: 22px;
+  }
+}
+
+@include big-phone {
+  .description {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@include phone {
+  .description {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}

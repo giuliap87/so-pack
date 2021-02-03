@@ -1,4 +1,4 @@
-import styles from "./MyCarousel.module.css";
+import styles from "./MyCarousel.module.scss";
 import Carousel from "react-bootstrap/Carousel";
 
 function MyCarousel({ details }) {

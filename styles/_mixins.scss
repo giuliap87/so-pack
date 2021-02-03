@@ -1,0 +1,66 @@
+// colors variables
+
+$primaryColor: rgb(207, 2, 2);
+$primaryColorDark: rgb(128, 3, 3);
+$white: #fff;
+$black: #000;
+
+$titleLineHeight: 130%;
+$pLineHeight: 140%;
+
+//box-shadows
+
+@mixin card-box-shadow {
+  box-shadow: 1px 2px 5px 0px rgb(0 0 0 / 50%);
+}
+
+//containers styles
+
+@mixin containerStyle {
+  padding: 0 80px;
+}
+
+@mixin sectionStyle {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+//border-radius
+
+@mixin card-border-radius {
+  border-radius: 5px;
+}
+
+// media queries
+
+@mixin big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1201px) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin tablet-portrait {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin big-phone {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: 481px) {
+    @content;
+  }
+}

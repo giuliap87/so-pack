@@ -1,0 +1,69 @@
+@import "../../styles/mixins";
+
+.finishedProductSection {
+  margin: 80px 0;
+}
+
+.container {
+  @include containerStyle;
+}
+.description {
+  font-weight: 300;
+  span {
+    color: $primaryColor;
+    font-weight: 400;
+  }
+}
+
+.scrollDown {
+  margin-left: 45%;
+  background-color: transparent;
+  border: none;
+  color: $primaryColor;
+  transition: color 0.4s ease;
+}
+
+.scrollDown:hover {
+  color: $primaryColorDark;
+}
+
+.scrollDown svg {
+  font-size: 80px;
+}
+
+@include tablet-landscape {
+  .container {
+    padding: 0 70px;
+  }
+  .description {
+    font-size: 22px;
+  }
+}
+
+@include tablet-portrait {
+  .description {
+    font-size: 20px;
+  }
+}
+
+@include big-phone {
+  .container {
+    padding: 0 60px;
+  }
+  .description {
+    font-size: 18px;
+  }
+
+  .scrollDown {
+    display: none;
+  }
+}
+
+@include phone {
+  .container {
+    padding: 0 10px;
+  }
+  .description {
+    font-size: 16px;
+  }
+}

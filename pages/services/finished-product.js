@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "../../components/Navbar/secondaryNavbar";
 import FinishedProductSection from "../../components/FinishProduct/FinishProduct";
+import Process from "../../components/FinishProduct/Process/Process";
 import Footer from "../../components/Footer/Footer";
 
 function FinishedProduct() {
@@ -9,9 +10,12 @@ function FinishedProduct() {
       <Head>
         <title>So pack services - Finished Products</title>
       </Head>
-      <Navbar />
-      <FinishedProductSection />
-      <Footer />
+      <div style={{ minHeight: "calc(100vh - 80px)" }}>
+        <Navbar />
+        <FinishedProductSection />
+        <Process />
+        <Footer />
+      </div>
     </div>
   );
 }

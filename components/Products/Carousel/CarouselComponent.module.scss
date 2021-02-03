@@ -1,0 +1,66 @@
+@import "../../../styles/mixins";
+
+.carousel {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  img {
+    height: 350px;
+    width: 600px;
+  }
+}
+
+@include tablet-portrait {
+  .carousel {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .item {
+    img {
+      height: 300px;
+      width: 500px;
+    }
+  }
+
+  .item {
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+@include big-phone {
+  .carousel {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .item {
+    img {
+      height: 200px;
+      width: 400px;
+    }
+  }
+}
+
+@include phone {
+  .carousel {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .item {
+    img {
+      height: 150px;
+      width: 300px;
+    }
+  }
+}

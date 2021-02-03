@@ -1,4 +1,4 @@
-import styles from "./Contacts.module.css";
+import styles from "./Contacts.module.scss";
 import Heading from "../Heading/Heading";
 import GoogleMap from "../GoogleMap/GoogleMap";
 import Button from "@material-ui/core/Button";

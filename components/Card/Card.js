@@ -1,11 +1,9 @@
-import styles from "./Card.module.css";
-import Button from "@material-ui/core/Button";
-import Link from "next/link";
+import styles from "./Card.module.scss";
 
-function MyCard({ id, title, showOverlay }) {
+function MyCard({ id, title, setOverlay }) {
   return (
     <div
-      onClick={showOverlay}
+      onClick={setOverlay}
       className={styles.container}
       style={{
         backgroundImage: `linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/images/${id}.png)`,

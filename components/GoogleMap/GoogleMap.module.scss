@@ -1,9 +1,11 @@
+@import "../../styles/mixins";
+
 .map {
   height: 400px;
   width: 400px;
 }
 
-@media only screen and (max-width: 992px) {
+@include tablet-landscape {
   .map {
     height: 300px;
     width: 300px;
@@ -11,14 +13,14 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@include tablet-portrait {
   .map {
     height: 300px;
     width: 300px;
   }
 }
 
-@media only screen and (max-width: 481px) {
+@include phone {
   .map {
     height: 200px;
     width: 200px;
