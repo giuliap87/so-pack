@@ -3,7 +3,8 @@
 .serviceSection {
   @include sectionStyle;
   color: $primaryColor;
-  background-color: #ccc;
+  background-image: url("/images/servicesBackground.jpg");
+  background-size: cover;
 }
 
 .container {
@@ -19,8 +20,12 @@
   align-items: center;
   justify-content: center;
   a {
-    color: $primaryColor;
+    color: $white;
     text-decoration: none;
+  }
+
+  a:hover, a:active{
+    color: $primaryColor;
   }
 }
 
@@ -28,13 +33,13 @@
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: $primaryColor;
   margin: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
 
@@ -43,7 +48,7 @@
 
 .item:hover {
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 15px -1px rgba(0, 0, 0, 0.2);
 }
 
 .item:active {

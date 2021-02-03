@@ -5,8 +5,7 @@ function HomePageSection() {
   return (
     <section className={styles.homeSection}>
       <h1 className={styles.logo}>
-        So Pack<span>!</span>
-      </h1>
+        <img src={"/images/logo.svg"}/>      </h1>
       <a href="#about" className={styles.scrollDown}>
         <KeyboardArrowDownIcon />
       </a>

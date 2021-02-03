@@ -30,7 +30,7 @@ function NavigationBar() {
     >
       <Container>
         <Link href="/" passHref>
-          <Navbar.Brand>So pack!</Navbar.Brand>
+        <Navbar.Brand className={styles.logo}><img src={"/images/logo.svg"}/></Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

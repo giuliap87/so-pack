@@ -1,9 +1,12 @@
 @import "../../styles/mixins";
 
 .homeSection {
-  background-color: rgb(216, 201, 135);
-  height: calc(100vh - 61px);
+  background-image: url("/images/homeBackgroundalt.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
   position: relative;
+  margin-top: -79px;
 }
 
 .logo {
@@ -11,11 +14,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: $white;
-
-  span {
-    color: $primaryColor;
-  }
+  height: 90px;
+  width: 90px;
 }
 
 .scrollDown {
@@ -33,8 +33,14 @@
   }
 }
 
-.scrollDown:hover {
-  color: $primaryColor;
+.scrollDown:hover, .scrollDown:active{
+ color: $white;
+}
+
+@include tablet-landscape{
+  .homeSection{
+    margin-top: 0;
+  }
 }
 
 @include phone {

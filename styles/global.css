@@ -11,6 +11,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1 {
   font-size: 66px;
 }

@@ -6,7 +6,7 @@ function Products() {
   return (
     <section id="products" className={styles.productSection}>
       <div className={styles.container}>
-        <Heading color="#000">Our products</Heading>
+        <Heading color="#59363a">Our products</Heading>
         <div className={styles.carousel}>
           <Carousel />
         </div>
