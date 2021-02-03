@@ -4,9 +4,18 @@ import Navbar from "../../components/Navbar/secondaryNavbar";
 import Description from "../../components/Packing/Description/Description";
 import Packing from "../../components/Packing/Packing";
 import Footer from "../../components/Footer/Footer";
-import Overlay from "../../components/Packing/Overlay";
 
 function Packaging() {
+
+  const [isOverlay, setIsOverlay] = useState(false);
+
+  function toggleOverlay(){
+    setIsOverlay(!isOverlay)
+  }
+
+  function closeOverlay(){
+    setIsOverlay(false)
+  }
 
   return (
     <div>
@@ -15,8 +24,8 @@ function Packaging() {
       </Head>
       <div style={{ minHeight: "calc(100vh - 80px)" }}>
         <Navbar />
-        <Description />
-        <Packing />
+        <Description isOverlay={isOverlay}/>
+        <Packing isOverlay={isOverlay} toggleOverlay={toggleOverlay} closeOverlay={closeOverlay}/>
       </div>
       <Footer />
     </div>

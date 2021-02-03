@@ -47,35 +47,32 @@ const details = [
   },
 ];
 
-function Packing() {
-  const [isOverlay, setIsOverlay] = useState(false);
-
-  function showOverlay() {
-    setIsOverlay(!isOverlay);
+function Packing({ toggleOverlay, closeOverlay, isOverlay }) {
+  function setOverlay() {
+    toggleOverlay();
   }
-
-  function closeOverlay() {
-    setIsOverlay(false);
+  function close() {
+    closeOverlay();
   }
 
   return (
     <div className={styles.container}>
-      <div className={styles.cardsContainer}>
+      <div
+        className={styles.cardsContainer}
+        style={isOverlay ? { filter: "blur(5px)" } : {}}
+      >
         {details.map((card) => (
           <Card
             className={styles.card}
             key={card.title}
             id={card.id}
             title={card.title}
-            showOverlay={showOverlay}
+            setOverlay={setOverlay}
           />
         ))}
       </div>
       {isOverlay && (
-        <Overlay
-          closeOverlay={closeOverlay}
-          description={details[0].description}
-        />
+        <Overlay close={close} description={details[0].description} />
       )}
     </div>
   );

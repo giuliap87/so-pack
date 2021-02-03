@@ -1,9 +1,12 @@
 import styles from "./Description.module.scss";
 import Heading from "../../Heading/Heading";
 
-function Description() {
+function Description({ isOverlay }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={isOverlay ? { filter: "blur(5px)" } : {}}
+    >
       <div className={styles.text}>
         <Heading color="rgb(207, 3, 3)">Packaging Components</Heading>
         <p className={styles.description}>

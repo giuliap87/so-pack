@@ -7,10 +7,10 @@ const details = [
   { src: "/images/2.png", name: "Second Image" },
 ];
 
-function Overlay({ description, closeOverlay }) {
+function Overlay({ description, close }) {
   return (
     <div className={styles.container}>
-      <CloseIcon className={styles.closeIcon} onClick={closeOverlay} />
+      <CloseIcon className={styles.closeIcon} onClick={close} />
       <Carousel className={styles.carousel} details={details} />
       <p className={styles.description}>{description}</p>
     </div>
