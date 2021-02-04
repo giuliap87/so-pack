@@ -1,23 +1,89 @@
 @import "../../styles/mixins";
 
-.carousel {
+/// carousel big
+
+.carouselBig {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselItemBig {
+  img {
+    height: 350px;
+    width: 600px;
+  }
+}
+
+@include tablet-portrait {
+  .carouselBig {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carouselItemBig {
+    img {
+      height: 300px;
+      width: 500px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+@include big-phone {
+  .carouselBig {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carouselItemBig {
+    img {
+      height: 200px;
+      width: 400px;
+    }
+  }
+}
+
+@include phone {
+  .carouselBig {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carouselItemBig {
+    img {
+      height: 150px;
+      width: 300px;
+    }
+  }
+}
+
+// carousel small
+
+.carouselSmall {
   width: 400px;
 }
 
-.carouselItem {
+.carouselItemSmall {
   height: 300px;
   width: 400px;
-  h3{
+  h3 {
     font-size: 22px;
   }
 }
 
 @include tablet-portrait {
-  .carousel {
+  .carouselSmall {
     width: 350px;
   }
 
-  .carouselItem {
+  .carouselItemSmall {
     height: 250px;
     width: 350px;
 
@@ -28,11 +94,11 @@
 }
 
 @include big-phone {
-  .carousel {
+  .carouselSmall {
     width: 300px;
   }
 
-  .carouselItem {
+  .carouselItemSmall {
     height: 200px;
     width: 300px;
     h3 {
@@ -42,11 +108,11 @@
 }
 
 @include phone {
-  .carousel {
+  .carouselSmall {
     width: 250px;
   }
 
-  .carouselItem {
+  .carouselItemSmall {
     height: 150px;
     width: 250px;
     h3 {
