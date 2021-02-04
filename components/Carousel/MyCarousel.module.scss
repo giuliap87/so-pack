@@ -1,5 +1,19 @@
 @import "../../styles/mixins";
 
+// carousel small
+
+.carouselSmall {
+  width: 400px;
+}
+
+.carouselItemSmall {
+  height: 300px;
+  width: 400px;
+  h3 {
+    font-size: 22px;
+  }
+}
+
 /// carousel big
 
 .carouselBig {
@@ -34,6 +48,8 @@
   }
 }
 
+// media queries big
+
 @include big-phone {
   .carouselBig {
     width: 400px;
@@ -64,19 +80,7 @@
   }
 }
 
-// carousel small
-
-.carouselSmall {
-  width: 400px;
-}
-
-.carouselItemSmall {
-  height: 300px;
-  width: 400px;
-  h3 {
-    font-size: 22px;
-  }
-}
+// carousel small media queries
 
 @include tablet-portrait {
   .carouselSmall {
