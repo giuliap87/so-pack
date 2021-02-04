@@ -45,7 +45,7 @@ function Footer() {
           <li>Rue blabla, 1234 Paris - France</li>
           <li>0348-593094</li>
         </ul>
-        <Button variant="contained" href={`mailto:sopack@gmail.com`}>
+        <Button className={styles.contactBtn} variant="contained" href={`mailto:sopack@gmail.com`}>
           Contact us
         </Button>
         <p className={styles.copyright}>

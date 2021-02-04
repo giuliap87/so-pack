@@ -8,7 +8,6 @@ import { useState } from "react";
 function Packing({ toggleOverlay, closeOverlay, isOverlay }) {
   const [cardId, setCardId] = useState(0);
   function setOverlay(e) {
-    console.log(e.target.id)
     setCardId(e.target.id);
     toggleOverlay();
   }

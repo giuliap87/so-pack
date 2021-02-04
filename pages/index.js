@@ -11,8 +11,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>So pack!</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Custom Made Perfumes</title>
       </Head>
       <MainNavbar />
       <HomePage />
