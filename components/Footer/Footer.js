@@ -18,13 +18,12 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.logo}>
-        So <br />
-        Pack!
+        <img src={"/images/logoWhite.svg"}/>
       </div>
       <ul className={styles.footerList}>
         <h6>Company</h6>
         {links.map((link) => (
-          <li>
+          <li key={link.name}>
             <Link href={link.path} passHref>
               <a>{link.name}</a>
             </Link>
@@ -34,7 +33,7 @@ function Footer() {
       <ul className={styles.footerList}>
         <h6>Our services</h6>
         {services.map((link) => (
-          <li>
+          <li key={link.name}>
             <Link href={link.path} passHref>
               <a>{link.name}</a>
             </Link>
@@ -46,7 +45,7 @@ function Footer() {
           <li>Rue blabla, 1234 Paris - France</li>
           <li>0348-593094</li>
         </ul>
-        <Button variant="contained" href={`mailto:sopack@gmail.com`}>
+        <Button className={styles.contactBtn} variant="contained" href={`mailto:sopack@gmail.com`}>
           Contact us
         </Button>
         <p className={styles.copyright}>

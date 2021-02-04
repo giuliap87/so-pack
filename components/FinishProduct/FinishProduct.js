@@ -6,7 +6,7 @@ function FinishProduct() {
   return (
     <section className={styles.finishedProductSection}>
       <div className={styles.container}>
-        <Heading color="rgb(207, 3, 3)">Full service projects</Heading>
+        <Heading color="#59363a">Full service projects</Heading>
         <p className={styles.description}>
           We manage the entire manufactoring process, from design and packaging
           conception to the filling and delivery. Thanks to our filling factory

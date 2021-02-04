@@ -3,7 +3,7 @@
 .footer {
   background-color: $primaryColor;
   color: $white;
-  height: 200px;
+  height: 100%;
   text-transform: uppercase;
   padding: 30px 20px 0 20px;
 
@@ -16,12 +16,20 @@
   h6 {
     text-transform: capitalize;
     font-weight: 600;
-    color: $black;
+    // color: $black;
+  }
+
+  .contactBtn {
+    font-weight: 700;
+    color: $primaryColor;
+    background-color: $white;
   }
 }
 
 .logo {
-  font-size: 24px;
+  height: 70px;
+  width: 70px;
+  margin-top: 10px;
 }
 
 .footerList {
@@ -60,20 +68,19 @@
 }
 
 @include tablet-portrait {
+  .logo {
+    display: none;
+  }
   .footer {
     font-size: 10px;
   }
 }
 
 @include big-phone {
-  .logo {
-    display: none;
-  }
 }
 
 @include phone {
   .footer {
     flex-direction: column;
-    height: 100%;
   }
 }

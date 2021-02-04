@@ -2,7 +2,9 @@
 
 .productSection {
   @include sectionStyle;
-  background-color: rgb(241, 245, 223);
+  // background-image: url("/images/productsBackground.jpg");
+  // background-size: cover;
+  background-color: $white;
 }
 
 .container {

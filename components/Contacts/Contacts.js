@@ -15,7 +15,7 @@ function Contacts() {
     <section id="contacts" className={styles.contactsSection}>
       <div className={styles.container}>
         <div className={styles.details}>
-          <Heading color="#000">Contacts</Heading>
+          <Heading color="#59363a">Contacts</Heading>
           <ul className={styles.list}>
             <li>{contacts.name}</li>
             <li>{contacts.address}</li>

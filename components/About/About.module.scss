@@ -2,7 +2,8 @@
 
 .aboutSection {
   @include sectionStyle;
-  background-color: $primaryColor;
+  background-image: url("/images/aboutBackground.jpg");
+  background-size: cover;
   color: $white;
 }
 
