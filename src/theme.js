@@ -20,7 +20,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    htmlFontSize: "18px",
+    htmlFontSize: 18,
     fontFamily: '"Montserrat", "sans-serif"',
     fontWeightLight: 300,
     fontWeightMedium: 400,

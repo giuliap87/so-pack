@@ -44,11 +44,7 @@ function NavigationBar({ main, secondary }) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            {main && (
-              <Link href="#about" passHref>
-                <Nav.Link>About</Nav.Link>
-              </Link>
-            )}
+            {main && <Nav.Link href="/#about">About</Nav.Link>}
             {secondary && (
               <Link href="/" passHref>
                 <Nav.Link>Home</Nav.Link>
@@ -56,7 +52,7 @@ function NavigationBar({ main, secondary }) {
             )}
             {main && (
               <>
-                <Nav.Link href="#services">Our Services</Nav.Link>
+                <Nav.Link href="/#services">Our Services</Nav.Link>
                 <NavDropdown title="" id="collasible-nav-dropdown">
                   <Link href="/services/packaging" passHref>
                     <NavDropdown.Item className={styles.dropdownItem}>
@@ -65,7 +61,7 @@ function NavigationBar({ main, secondary }) {
                   </Link>
                   <Link href="/services/finished-product" passHref>
                     <NavDropdown.Item
-                      href="#product/finished product"
+                      href="/#product/finished product"
                       className={styles.dropdownItem}
                     >
                       Finished Products
@@ -83,7 +79,7 @@ function NavigationBar({ main, secondary }) {
                 </Link>
                 <Link href="/services/finished-product" passHref>
                   <NavDropdown.Item
-                    href="#product/finished product"
+                    href="/#product/finished product"
                     className={styles.dropdownItem}
                   >
                     Finished Products
@@ -94,8 +90,8 @@ function NavigationBar({ main, secondary }) {
 
             {main && (
               <>
-                <Link href="#products" passHref><Nav.Link>Products</Nav.Link></Link>
-                <Link href="#contacts" passHref><Nav.Link>Contacts</Nav.Link></Link>
+                <Nav.Link href="/#products">Products</Nav.Link>
+                <Nav.Link href="/#contacts">Contacts</Nav.Link>
               </>
             )}
           </Nav>
