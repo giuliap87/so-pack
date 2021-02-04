@@ -8,12 +8,13 @@ import Contacts from "../components/Contacts/Contacts";
 import Footer from "../components/Footer/Footer";
 
 export default function Home() {
+const main = true;
   return (
     <div>
       <Head>
         <title>Custom Made Perfumes</title>
       </Head>
-      <MainNavbar />
+      <MainNavbar main={main}/>
       <HomePage />
       <About />
       <Service />

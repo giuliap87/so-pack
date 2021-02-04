@@ -6,9 +6,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
-// import { debounce } from "lodash";
+import { debounce } from "lodash";
 
-function NavigationBar() {
+function NavigationBar({ main, secondary }) {
   const [position, setPosition] = useState("top");
 
   useEffect(() => {
@@ -21,8 +21,11 @@ function NavigationBar() {
       }
     };
 
-    // const debounceScroll = debounce(handleScrolling, 500);
-    document.addEventListener("scroll", handleScrolling);
+    const debounceScroll = debounce(handleScrolling, 20);
+    document.addEventListener("scroll", debounceScroll);
+    () => {
+      return document.removeEventListener("scroll", handleScrolling);
+    };
   }, [position]);
 
   return (
@@ -41,28 +44,60 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            <Link href="#about" passHref>
-              <Nav.Link>About</Nav.Link>
-            </Link>
-            <Nav.Link href="#services">Our Services</Nav.Link>
-            <NavDropdown title="" id="collasible-nav-dropdown">
-              <Link href="/services/packaging" passHref>
-                <NavDropdown.Item className={styles.dropdownItem}>
-                  Packaging Components
-                </NavDropdown.Item>
+            {main && (
+              <Link href="#about" passHref>
+                <Nav.Link>About</Nav.Link>
               </Link>
-              <Link href="/services/finished-product" passHref>
-                <NavDropdown.Item
-                  href="#product/finished product"
-                  className={styles.dropdownItem}
-                >
-                  Finished Products
-                </NavDropdown.Item>
+            )}
+            {secondary && (
+              <Link href="/" passHref>
+                <Nav.Link>Home</Nav.Link>
               </Link>
-            </NavDropdown>
+            )}
+            {main && (
+              <>
+                <Nav.Link href="#services">Our Services</Nav.Link>
+                <NavDropdown title="" id="collasible-nav-dropdown">
+                  <Link href="/services/packaging" passHref>
+                    <NavDropdown.Item className={styles.dropdownItem}>
+                      Packaging Components
+                    </NavDropdown.Item>
+                  </Link>
+                  <Link href="/services/finished-product" passHref>
+                    <NavDropdown.Item
+                      href="#product/finished product"
+                      className={styles.dropdownItem}
+                    >
+                      Finished Products
+                    </NavDropdown.Item>
+                  </Link>
+                </NavDropdown>
+              </>
+            )}
+            {secondary && (
+              <NavDropdown title="Our Services" id="collasible-nav-dropdown">
+                <Link href="/services/packaging" passHref>
+                  <NavDropdown.Item className={styles.dropdownItem}>
+                    Packaging Components
+                  </NavDropdown.Item>
+                </Link>
+                <Link href="/services/finished-product" passHref>
+                  <NavDropdown.Item
+                    href="#product/finished product"
+                    className={styles.dropdownItem}
+                  >
+                    Finished Products
+                  </NavDropdown.Item>
+                </Link>
+              </NavDropdown>
+            )}
 
-            <Nav.Link href="#products">Products</Nav.Link>
-            <Nav.Link href="#contacts">Contacts</Nav.Link>
+            {main && (
+              <>
+                <Link href="#products" passHref><Nav.Link>Products</Nav.Link></Link>
+                <Link href="#contacts" passHref><Nav.Link>Contacts</Nav.Link></Link>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
