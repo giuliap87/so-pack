@@ -11,29 +11,41 @@ const packagingComponentsInfo = [
     service: "Consulting",
     description:
       "We offer professional consultations and manage the development of one of several components of perfumery of cosmetic.",
-      images: [{ name: "Item 1", src: "/images/0.png" }, { name: "Item 2", src: "/images/1.png" }],
+    images: [
+      { id: 0, name: "Item 1", description: "", src: "/images/0.png" },
+      { id: 1, name: "Item 2", description: "", src: "/images/1.png" },
+    ],
   },
   {
     id: 1,
     service: "Bottle",
     description:
       "According to client's need and its market, we can customize our European standard bottles or develop a specific mold for your project.",
-      images: [{ name: "Item 3", src: "/images/2.png" }, { name: "Item 4", src: "/images/3.png" }],
-    },
+    images: [
+      { id: 2, name: "Item 3", description: "", src: "/images/2.png" },
+      { id: 3, name: "Item 4", description: "", src: "/images/3.png" },
+    ],
+  },
   {
     id: 2,
     service: "Caps",
     description:
       "According to client's need and its market, we can customize our European standard bottles or develop a specific mold for your project.",
-      images: [{ name: "Item 5", src: "/images/4.png" }, { name: "Item 6", src: "/images/0.png" }],
-    },
+    images: [
+      { id: 4, name: "Item 5", description: "", src: "/images/4.png" },
+      { id: 0, name: "Item 6", description: "", src: "/images/0.png" },
+    ],
+  },
   {
     id: 3,
     service: "Packaging",
     description:
       "According to client's need and its market, we can customize our European standard bottles or develop a specific mold for your project.",
-      images: [{ name: "Item 7", src: "/images/2.png" }, { name: "Item 8", src: "/images/1.png" }],
-    },
+    images: [
+      { id: 2, name: "Item 7", description: "", src: "/images/2.png" },
+      { id: 1, name: "Item 8", description: "", src: "/images/1.png" },
+    ],
+  },
 ];
 
 const processInfo = [
@@ -75,4 +87,12 @@ const processInfo = [
   },
 ];
 
-export { contactDetails, packagingComponentsInfo, processInfo };
+const products = [
+  { id: 0, name: "Product one", description: "", src: "/images/0.png" },
+  { id: 1, name: "Product two", description: "", src: "/images/1.png" },
+  { id: 2, name: "Product three", description: "", src: "/images/2.png" },
+  { id: 3, name: "Product four", description: "", src: "/images/3.png" },
+  { id: 4, name: "Product five", description: "", src: "/images/4.png" },
+];
+
+export { contactDetails, packagingComponentsInfo, processInfo, products };

@@ -1,6 +1,7 @@
 import styles from "./Products.module.scss";
 import Heading from "../Heading/Heading";
-import Carousel from "./Carousel/CarouselComponent";
+import Carousel from "../Carousel/MyCarousel";
+import {products } from "../../info/info"
 
 function Products() {
   return (
@@ -8,7 +9,7 @@ function Products() {
       <div className={styles.container}>
         <Heading color="#59363a">Our products</Heading>
         <div className={styles.carousel}>
-          <Carousel />
+          <Carousel size="big" details={products} />
         </div>
       </div>
     </section>
