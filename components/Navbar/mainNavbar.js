@@ -53,7 +53,7 @@ function NavigationBar({ main, secondary }) {
             {main && (
               <>
                 <Nav.Link href="/#services">Our Services</Nav.Link>
-                <NavDropdown title="" id="collasible-nav-dropdown">
+                <NavDropdown title="" id="collasible-nav-dropdown" className={styles.dropdownMenu}>
                   <Link href="/services/packaging" passHref>
                     <NavDropdown.Item className={styles.dropdownItem}>
                       Packaging Components

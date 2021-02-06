@@ -4,7 +4,7 @@
 .serviceSection {
   @include sectionStyle;
   color: $primaryColor;
-  background-image: url("/images/servicesBackground.jpg");
+  background-image: url("/images/backgrounds/servicesBackground.jpg");
   background-size: cover;
 }
 

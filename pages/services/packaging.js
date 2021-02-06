@@ -21,7 +21,7 @@ function Packaging() {
   }
 
   return (
-    <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: .4}}} exit={{opacity: 0}}>
+    <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: .6}}} exit={{opacity: 0}}>
       <Head>
         <title>So pack services - Packaging</title>
       </Head>
