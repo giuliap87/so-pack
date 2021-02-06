@@ -6,9 +6,10 @@ import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
+import { motion, AnimatePresence} from "framer-motion";
 
 export default function MyApp(props) {
-  const { Component, pageProps } = props;
+  const { Component, pageProps, router } = props;
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -50,9 +51,10 @@ export default function MyApp(props) {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter key={router.route}>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </ThemeProvider>
     </React.Fragment>
   );

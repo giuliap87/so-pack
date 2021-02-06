@@ -1,4 +1,6 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
+
 
 .container {
   @include card-box-shadow;
@@ -17,6 +19,7 @@
   h3 {
     font-size: 26px;
     margin: 0;
+    cursor: pointer;
   }
 }
 

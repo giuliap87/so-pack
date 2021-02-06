@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Navbar from "../../components/Navbar/mainNavbar";
-import FinishedProductSection from "../../components/FinishProduct/FinishProduct";
-import Process from "../../components/FinishProduct/Process/Process";
+import FinishedProductSection from "../../components/FinishedProduct/FinishedProduct";
+import Process from "../../components/FinishedProduct/Process/Process";
 import Footer from "../../components/Footer/Footer";
+import {motion} from "framer-motion"
 
 function FinishedProduct() {
 
   const secondary = true;
   return (
-    <div>
+    <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: .4}}} exit={{opacity: 0}}>
       <Head>
         <title>So pack services - Finished Products</title>
       </Head>
@@ -18,7 +19,7 @@ function FinishedProduct() {
         <Process />
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

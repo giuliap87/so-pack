@@ -1,12 +1,13 @@
-import styles from "./FinishProduct.module.scss";
+import styles from "./FinishedProduct.module.scss";
 import Heading from "../Heading/Heading";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import {primaryColor} from "../../src/variables";
 
 function FinishProduct() {
   return (
     <section className={styles.finishedProductSection}>
       <div className={styles.container}>
-        <Heading color="#59363a">Full service projects</Heading>
+        <Heading color={primaryColor}>Full service projects</Heading>
         <p className={styles.description}>
           We manage the entire manufactoring process, from design and packaging
           conception to the filling and delivery. Thanks to our filling factory

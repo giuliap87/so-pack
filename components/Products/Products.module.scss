@@ -1,26 +1,50 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
 
 .productSection {
   @include sectionStyle;
-  // background-image: url("/images/productsBackground.jpg");
-  // background-size: cover;
-  background-color: $white;
+  background-color: #e8e8e8;
 }
 
 .container {
   @include containerStyle;
-  display: block;
-  width: 100vw;
-}
-
-.carousel {
   display: flex;
   justify-content: center;
 }
 
+.textContainer {
+  width: 50%;
+}
+@include desktop {
+  .text {
+    font-size: 20px;
+    width: 400px;
+  }
+}
+
 @include tablet-landscape {
+  .productSection {
+    @include sectionStyleForSmallerScreen;
+  }
   .container {
     padding: 0 70px;
+  }
+
+  .text {
+    font-size: 20px;
+    width: 300px;
+  }
+}
+
+@include tablet-portrait {
+  .text {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 }
 

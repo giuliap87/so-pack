@@ -37,6 +37,10 @@ p {
   line-height: 1.4;
 }
 
+h1, h2, h3, h4, p {
+  cursor: default;
+}
+
 img {
   max-width: 100%;
   display: block;

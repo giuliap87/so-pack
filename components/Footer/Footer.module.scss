@@ -1,4 +1,6 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
+
 
 .footer {
   background-color: $primaryColor;
@@ -49,7 +51,7 @@
   }
   a:hover,
   a:active {
-    color: $black;
+    color: $primaryColor;
   }
 }
 
@@ -58,7 +60,6 @@
   font-size: 14px;
   text-align: center;
   text-transform: capitalize;
-  color: $black;
 }
 
 @include tablet-landscape {

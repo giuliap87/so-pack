@@ -1,11 +1,12 @@
 import styles from "./About.module.scss";
 import Heading from "../Heading/Heading";
+import {white} from "../../src/variables";
 
 function About() {
   return (
     <section id="about" className={styles.aboutSection}>
       <div className={styles.container}>
-        <Heading color="#fff">Custom-made perfumes</Heading>
+        <Heading color={white}>Custom-made perfumes</Heading>
         <p className={styles.paragraph}>
           So pack is a perfumery and cosmetic manufacturing company based in
           Paris. We can realize your Made in France perfumes and create your own

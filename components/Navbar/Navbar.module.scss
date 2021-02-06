@@ -1,4 +1,10 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
+
+.navbar,
+.navbarScroll {
+  font-size: 18px;
+}
 
 .navbar {
   background-color: transparent;
@@ -25,6 +31,11 @@
 @include tablet-landscape {
   .dropdownItem {
     padding: 0.2rem;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
   }
 }
 
