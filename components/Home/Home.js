@@ -1,19 +1,20 @@
 import styles from "./Home.module.scss";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { motion } from "framer-motion";
+import { Loop } from "@material-ui/icons";
 
 function HomePageSection() {
   const variants = {
     hidden: {
-      scale: .8,
+      scale: 0.8,
       opacity: 0,
     },
     visible: {
       scale: 1,
       opacity: 1,
       transition: {
-        delay: .7
-      }
+        delay: 0.5,
+      },
     },
   };
 
@@ -24,9 +25,9 @@ function HomePageSection() {
           <img src={"/images/logo.svg"} />{" "}
         </motion.div>
       </h1>
-      <a href="#about" className={styles.scrollDown}>
+      <motion.a href="#about" className={styles.scrollDown}>
         <KeyboardArrowDownIcon />
-      </a>
+      </motion.a>
     </section>
   );
 }

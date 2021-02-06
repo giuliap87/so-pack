@@ -23,9 +23,13 @@
   width: 60px;
 }
 
+.dropdownMenu {
+  margin-left: -10px;
+}
+
 .dropdownItem {
-  font-size: 14px;
-  padding: 6px;
+  font-size: 13px;
+  padding: 5px 8px;
 }
 
 @include tablet-landscape {

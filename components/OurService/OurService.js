@@ -4,6 +4,11 @@ import Link from "next/link";
 import { primaryColor } from "../../src/variables";
 import { motion } from "framer-motion";
 
+import { useEffect } from "react";
+
+import "aos/dist/aos.css";
+import Aos from "aos";
+
 const scale = {
   scale: 1.1,
   transition: {
@@ -12,18 +17,32 @@ const scale = {
 };
 
 function OurService() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <section id="services" className={styles.serviceSection}>
-      <div className={styles.container}>
+      <div className={styles.container} data-aos="fade-up">
         <Heading color={primaryColor}>Our services</Heading>
         <div className={styles.itemsContainer}>
           <Link href="/services/finished-product" passHref>
-            <motion.a className={styles.item} whileHover={scale} whileFocus={scale}>
+            <motion.a
+              className={styles.item}
+              whileHover={scale}
+              whileFocus={scale}
+            >
               Full Service <br /> Projects
             </motion.a>
           </Link>
           <Link href="/services/packaging" passHref>
-            <motion.a className={styles.item} whileHover={scale} whileFocus={scale}>
+            <motion.a
+              className={styles.item}
+              whileHover={scale}
+              whileFocus={scale}
+            >
               Packaging <br /> Components
             </motion.a>
           </Link>
