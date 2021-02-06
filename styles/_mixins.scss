@@ -1,15 +1,3 @@
-// colors variables
-
-// $primaryColor: rgb(207, 2, 2);
-// $primaryColorDark: rgb(128, 3, 3);
-$primaryColor: #59363a;
-$primaryColorDark: #946469;
-$white: #fff;
-$black: #000;
-
-$titleLineHeight: 130%;
-$pLineHeight: 140%;
-
 //box-shadows
 
 @mixin card-box-shadow {
@@ -26,6 +14,10 @@ $pLineHeight: 140%;
   height: 100vh;
   display: flex;
   align-items: center;
+}
+
+@mixin sectionStyleForSmallerScreen {
+  height: calc(100vh -70px)
 }
 
 //border-radius

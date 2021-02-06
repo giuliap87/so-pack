@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Head from "next/head";
 import Navbar from "../../components/Navbar/mainNavbar";
-import Description from "../../components/Packing/Description/Description";
+import Description from "../../components/Packing/Description";
 import Packing from "../../components/Packing/Packing";
 import Footer from "../../components/Footer/Footer";
+import {motion} from "framer-motion";
 
 function Packaging() {
 
@@ -20,7 +21,7 @@ function Packaging() {
   }
 
   return (
-    <div>
+    <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: .4}}} exit={{opacity: 0}}>
       <Head>
         <title>So pack services - Packaging</title>
       </Head>
@@ -30,7 +31,7 @@ function Packaging() {
         <Packing isOverlay={isOverlay} toggleOverlay={toggleOverlay} closeOverlay={closeOverlay}/>
       </div>
       <Footer />
-    </div>
+    </motion.div>
   );
 }
 

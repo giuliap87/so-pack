@@ -1,8 +1,9 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
 
 .aboutSection {
   @include sectionStyle;
-  background-image: url("/images/aboutBackground.jpg");
+  background-image: url("/images/backgrounds/aboutBackground.jpg");
   background-size: cover;
   color: $white;
 }
@@ -16,12 +17,16 @@
 }
 
 @include tablet-landscape {
+  .aboutSection {
+    @include sectionStyleForSmallerScreen
+  }
   .paragraph {
     font-size: 18px;
   }
   .container {
     padding: 0 70px;
   }
+
 }
 
 @include big-phone {

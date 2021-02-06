@@ -1,10 +1,9 @@
-const contactDetails = [
-  { name: "So Pack" },
-  { address: "Rue blabla, 1234 Paris - France" },
-  { phone: "0348-593094" },
-  { email: "sopack@gmail.com" },
-];
-
+const contacts = {
+  name: "SoPack",
+  address: "Address: Rue blabla, 1234 Paris - France",
+  phone: "0348-593094",
+  email: "sopack@gmail.com",
+};
 const packagingComponentsInfo = [
   {
     id: 0,
@@ -88,11 +87,20 @@ const processInfo = [
 ];
 
 const products = [
-  { id: 0, name: "Product one", description: "", src: "/images/0.png" },
-  { id: 1, name: "Product two", description: "", src: "/images/1.png" },
-  { id: 2, name: "Product three", description: "", src: "/images/2.png" },
-  { id: 3, name: "Product four", description: "", src: "/images/3.png" },
-  { id: 4, name: "Product five", description: "", src: "/images/4.png" },
+  { id: 0, name: "Je Suis", description: "Je Suis", src: "/images/products/jesuis.jpg" },
+  { id: 1, name: "Kohinu Diamond for her", description: "Kohinu Diamond for her", src: "/images/products/kohinudiamondforher.jpg" },
+  { id: 2, name: "Kohinu Diamond for him", description: "Kohinu Diamond for him", src: "/images/products/kohinudiamondforhim.jpg" },
+  { id: 3, name: "Odecla Night e Le Music", description: "Odecla Night e Le Music", src: "/images/products/odeclanightelemusic.jpg" },
+  { id: 4, name: "Ruby of Temur for her", description: "Ruby of Temur for her", src: "/images/products/rubyoftemurforher.jpg" },
+  { id: 5, name: "Ruby of Temur for him", description: "Ruby of Temur for him", src: "/images/products/rubyoftemurforhim.jpg" },
+  { id: 6, name: "Shine like diamonds", description: "Shine like diamonds", src: "/images/products/shinelikediamonds.jpg" },
+  { id: 7, name: "Silver Oud", description: "Silver Oud", src: "/images/products/silveroud.jpg" },
+  { id: 8, name: "The Woods Collection", description: "The woods collection", src: "/images/products/thewoodscollection.jpg" },
+  { id: 9, name: "Vilavie Collection", description: "Vilavie collection", src: "/images/products/vilaviecollection.jpg" },
+  { id: 10, name: "Vilavie Modern Rose", description: "Vilavie modern rose", src: "/images/products/vilaviemodernrose.jpg" },
+  { id: 11, name: "Vilavie Precious Wood", description: "Vilavie precious wood", src: "/images/products/vilaviepreciouswood.jpg" },
+  { id: 12, name: "Vilavie Royal Oud", description: "Vilavie Royal Oud", src: "/images/products/vilavieroyaloud.jpg" },
+
 ];
 
-export { contactDetails, packagingComponentsInfo, processInfo, products };
+export { contacts, packagingComponentsInfo, processInfo, products };

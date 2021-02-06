@@ -1,4 +1,6 @@
 @import "../../../styles/mixins";
+@import "../../../styles/variables";
+
 
 .container {
   @include containerStyle;
@@ -19,7 +21,7 @@
   position: absolute;
   top: -80px;
   left: 0;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 40px;
 }
 
@@ -31,6 +33,7 @@
 
 .step {
   background-color: $primaryColor;
+  cursor: pointer;
   height: 210px;
   width: 210px;
   text-align: center;

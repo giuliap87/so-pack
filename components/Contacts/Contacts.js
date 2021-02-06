@@ -2,20 +2,15 @@ import styles from "./Contacts.module.scss";
 import Heading from "../Heading/Heading";
 import GoogleMap from "../GoogleMap/GoogleMap";
 import Button from "@material-ui/core/Button";
-
-const contacts = {
-  name: "SoPack",
-  address: "Address: Rue blabla, 1234 Paris - France",
-  phone: "0348-593094",
-  email: "sopack@gmail.com",
-};
+import {primaryColor} from "../../src/variables";
+import {contacts} from "../../info/info";
 
 function Contacts() {
   return (
     <section id="contacts" className={styles.contactsSection}>
       <div className={styles.container}>
         <div className={styles.details}>
-          <Heading color="#59363a">Contacts</Heading>
+          <Heading color={primaryColor}>Contacts</Heading>
           <ul className={styles.list}>
             <li>{contacts.name}</li>
             <li>{contacts.address}</li>

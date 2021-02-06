@@ -1,7 +1,8 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
 
 .homeSection {
-  background-image: url("/images/homeBackgroundalt.jpg");
+  background-image: url("/images/backgrounds/homeBackgroundalt.jpg");
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
@@ -33,18 +34,37 @@
   }
 }
 
-.scrollDown:hover, .scrollDown:active{
- color: $white;
+.scrollDown:hover,
+.scrollDown:active {
+  color: $white;
 }
 
-@include tablet-landscape{
-  .homeSection{
+@include tablet-landscape {
+  .homeSection {
     margin-top: 0;
+    height: calc(100vh - 70px);
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .scrollDown {
+    svg {
+      font-size: 60px;
+    }
   }
 }
 
-@include phone {
-  .homeSection {
-    height: 70vh;
+@include big-phone {
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+  .scrollDown {
+    svg {
+      font-size: 50px;
+    }
   }
 }

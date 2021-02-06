@@ -1,4 +1,5 @@
 @import "../../styles/mixins";
+@import "../../styles/variables";
 
 // carousel small
 
@@ -16,66 +17,47 @@
 
 /// carousel big
 
-.carouselBig {
-  max-width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .carouselItemBig {
+  position: relative;
   img {
-    height: 350px;
-    width: 600px;
+    width: 100%;
+  }
+  h3 {
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgb(206, 204, 204);
   }
 }
+
+
+@include tablet-landscape {
+  .carouselItemBig{
+    h3 {
+      font-size: 20px;
+    }
+  }
+}
+
 
 @include tablet-portrait {
-  .carouselBig {
-    width: 500px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .carouselItemBig {
-    img {
-      height: 300px;
-      width: 500px;
+  .carouselItemBig{
+    h3 {
+      font-size: 18px;
     }
+  }
+}
+
+@include big-phone {
+  .carouselItemBig{
     h3 {
       font-size: 16px;
     }
   }
 }
 
-// media queries big
-
-@include big-phone {
-  .carouselBig {
-    width: 400px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .carouselItemBig {
-    img {
-      height: 200px;
-      width: 400px;
-    }
-  }
-}
-
 @include phone {
-  .carouselBig {
-    width: 300px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .carouselItemBig {
-    img {
-      height: 150px;
-      width: 300px;
+  .carouselItemBig{
+    h3 {
+      font-size: 13px;
     }
   }
 }

@@ -1,5 +1,7 @@
 import styles from "./Description.module.scss";
-import Heading from "../../Heading/Heading";
+import Heading from "../Heading/Heading";
+import {primaryColor} from "../../src/variables";
+
 
 function Description({ isOverlay }) {
   return (
@@ -8,7 +10,7 @@ function Description({ isOverlay }) {
       style={isOverlay ? { filter: "blur(5px)" } : {}}
     >
       <div className={styles.text}>
-        <Heading color="#59363a">Packaging Components</Heading>
+        <Heading color={primaryColor}>Packaging Components</Heading>
         <p className={styles.description}>
           Thanks to our industry partners for glass, metal working, polymers
           injection and mold development, we can manage the develoment of one of

@@ -21,11 +21,11 @@ function NavigationBar({ main, secondary }) {
       }
     };
 
-    const debounceScroll = debounce(handleScrolling, 20);
-    document.addEventListener("scroll", debounceScroll);
-    () => {
-      return document.removeEventListener("scroll", handleScrolling);
-    };
+    // const debounceScroll = debounce(handleScrolling, 500);
+    document.addEventListener("scroll", handleScrolling);
+    // () => {
+    //   return document.removeEventListener("scroll", handleScrolling);
+    // };
   }, [position]);
 
   return (
