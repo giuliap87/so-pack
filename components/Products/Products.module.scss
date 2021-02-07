@@ -44,7 +44,7 @@
     @include sectionStyleForSmallerScreen;
   }
   .container {
-    padding: 0 70px;
+    padding: 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,14 +55,8 @@
   }
 }
 
-@include big-phone {
-  .container {
-    padding: 0 60px;
-  }
-}
-
 @include phone {
-  .productSection {
-    height: 70vh;
+  .container {
+    padding: 0 30px;
   }
 }

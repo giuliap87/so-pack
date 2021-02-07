@@ -1,7 +1,6 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-
 .container {
   background-color: $white;
   @include card-box-shadow;
@@ -26,7 +25,14 @@
   background-color: transparent;
   height: 25px;
   width: 25px;
-  border: none; 
+  border: none;
+
+  svg {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    padding: 2px;
+    color: $white;
+  }
 }
 .description {
   margin-top: 20px;
@@ -39,7 +45,7 @@
   .container {
     padding: 30px 50px;
     margin: 50px;
-    width: 550px
+    width: 550px;
   }
 
   .description {
@@ -63,10 +69,15 @@
   .container {
     top: 60px;
     padding: 40px 20px 0 20px;
-    margin: 20px;
     width: 300px;
   }
   .description {
     font-size: 10px;
+  }
+  .closeBtn {
+    svg {
+      height: 15px;
+      width: 15px;
+    }
   }
 }

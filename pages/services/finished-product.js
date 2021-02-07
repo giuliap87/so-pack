@@ -13,7 +13,7 @@ function FinishedProduct() {
       <Head>
         <title>So pack services - Finished Products</title>
       </Head>
-      <div style={{ minHeight: "calc(100vh - 80px)" }}>
+      <div style={{ minHeight: "calc(100vh - 70px)" }}>
         <Navbar secondary={secondary}/>
         <FinishedProductSection />
         <Process />
