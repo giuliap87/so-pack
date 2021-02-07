@@ -20,7 +20,6 @@
 @include big-desktop-up {
   .container {
     padding: 0 15%;
-    height: 50vh;
   }
 }
 
@@ -47,6 +46,6 @@
 
 @include phone {
   .container {
-    padding: 0 10px;
+    padding: 0 30px;
   }
 }

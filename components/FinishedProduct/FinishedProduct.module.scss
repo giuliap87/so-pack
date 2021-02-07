@@ -50,7 +50,7 @@
 
 @include tablet-portrait {
   .description {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
@@ -69,7 +69,7 @@
 
 @include phone {
   .container {
-    padding: 0 10px;
+    padding: 0 30px;
   }
   .description {
     font-size: 16px;

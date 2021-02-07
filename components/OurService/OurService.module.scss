@@ -106,14 +106,12 @@
 }
 
 @include phone {
-  .serviceSection {
-    height: 70vh;
+  .container {
+    padding: 0 30px;
   }
   .item {
-    font-size: 10px;
+    font-size: 13px;
     margin: 10px;
-    height: 110px;
-    width: 110px;
   }
   .itemsContainer {
     flex-direction: column;
