@@ -28,18 +28,24 @@
   }
 }
 
+@include desktop {
+  .carouselItemBig {
+    h3 {
+      font-size: 25px;
+    }
+  }
+}
 
 @include tablet-landscape {
-  .carouselItemBig{
+  .carouselItemBig {
     h3 {
       font-size: 20px;
     }
   }
 }
 
-
 @include tablet-portrait {
-  .carouselItemBig{
+  .carouselItemBig {
     h3 {
       font-size: 18px;
     }
@@ -47,7 +53,7 @@
 }
 
 @include big-phone {
-  .carouselItemBig{
+  .carouselItemBig {
     h3 {
       font-size: 16px;
     }
@@ -55,7 +61,7 @@
 }
 
 @include phone {
-  .carouselItemBig{
+  .carouselItemBig {
     h3 {
       position: relative;
       top: 50px;

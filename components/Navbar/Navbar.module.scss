@@ -1,6 +1,14 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
+.container {
+  width: 100vw;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .navbar,
 .navbarScroll {
   font-size: 18px;
@@ -32,7 +40,20 @@
   padding: 5px 8px;
 }
 
+@include big-desktop-up {
+  .container {
+    padding: 0 15%;
+  }
+  .dropdownItem {
+    font-size: 15px;
+    padding: 5px 8px;
+  }
+}
+
 @include tablet-landscape {
+  .container {
+    padding: 0 70px;
+  }
   .dropdownItem {
     padding: 0.2rem;
   }
@@ -46,5 +67,11 @@
 @include tablet-portrait {
   .dropdownItem {
     text-align: center;
+  }
+}
+
+@include big-phone{
+  .container {
+    padding: 0 10px;
   }
 }

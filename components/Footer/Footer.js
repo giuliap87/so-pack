@@ -18,7 +18,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.logo}>
-        <img src={"/images/logoWhite.svg"}/>
+        <img src={"/images/logoWhite.svg"} />
       </div>
       <ul className={styles.footerList}>
         <h6>Company</h6>
@@ -45,7 +45,11 @@ function Footer() {
           <li>Rue blabla, 1234 Paris - France</li>
           <li>0348-593094</li>
         </ul>
-        <Button className={styles.contactBtn} variant="contained" href={`mailto:sopack@gmail.com`}>
+        <Button
+          className={styles.contactBtn}
+          variant="contained"
+          href={`mailto:sopack@gmail.com`}
+        >
           Contact us
         </Button>
         <p className={styles.copyright}>

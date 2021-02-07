@@ -7,7 +7,7 @@
   @include card-box-shadow;
   @include card-border-radius;
   position: fixed;
-  top: 30px;
+  top: 10%;
   padding: 30px 20px 0 20px;
   margin: 60px 300px;
   display: flex;
@@ -15,25 +15,31 @@
   align-items: center;
   justify-content: center;
   z-index: 200;
+  width: 600px;
 }
 
-.closeIcon {
+.closeBtn {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
+  background-color: transparent;
+  height: 25px;
+  width: 25px;
+  border: none; 
 }
-
 .description {
   margin-top: 20px;
   font-size: 18px;
   text-align: center;
+  width: 50%;
 }
 
 @include tablet-portrait {
   .container {
     padding: 30px 50px;
     margin: 50px;
+    width: 550px
   }
 
   .description {
@@ -46,6 +52,7 @@
     top: 60px;
     padding: 30px 30px;
     margin: 30px;
+    width: 400px;
   }
   .description {
     font-size: 14px;
@@ -55,10 +62,11 @@
 @include phone {
   .container {
     top: 60px;
-    padding: 20px 20px;
+    padding: 40px 20px 0 20px;
     margin: 20px;
+    width: 300px;
   }
   .description {
-    font-size: 12px;
+    font-size: 10px;
   }
 }

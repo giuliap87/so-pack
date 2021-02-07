@@ -29,7 +29,7 @@
 // media queries
 
 @mixin big-desktop-up {
-  @media (min-width: 1800px) {
+  @media (min-width: 1400px) {
     @content;
   }
 }

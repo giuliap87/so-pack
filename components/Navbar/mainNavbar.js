@@ -35,7 +35,7 @@ function NavigationBar({ main, secondary }) {
       sticky="top"
       className={position != "top" ? styles.navbarScroll : styles.navbar}
     >
-      <Container>
+      <div className={styles.container}>
         <Link href="/" passHref>
           <Navbar.Brand className={styles.logo}>
             <img src={"/images/logo.svg"} />
@@ -96,7 +96,7 @@ function NavigationBar({ main, secondary }) {
             )}
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      </div>
     </Navbar>
   );
 }

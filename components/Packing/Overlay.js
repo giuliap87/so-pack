@@ -5,7 +5,9 @@ import CloseIcon from "@material-ui/icons/Close";
 function Overlay({ description, close, images }) {
   return (
     <div className={styles.container}>
-      <CloseIcon className={styles.closeIcon} onClick={close} />
+      <button className={styles.closeBtn} onClick={close}>
+        <CloseIcon className={styles.closeIcon} />
+      </button>
       <Carousel size="small" className={styles.carousel} details={images} />
       <p className={styles.description}>{description}</p>
     </div>
