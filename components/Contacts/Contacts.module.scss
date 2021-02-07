@@ -19,6 +19,16 @@
   font-size: 20px;
 }
 
+@include big-desktop-up {
+  .container {
+    padding: 0 15%;
+  }
+
+  .details { 
+    font-size: 25px;
+  }
+}
+
 @include tablet-landscape {
   .container {
     padding: 0 70px;

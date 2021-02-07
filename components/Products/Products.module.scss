@@ -15,8 +15,24 @@
 
 .textContainer {
   width: 50%;
+  margin-right: 100px;
 }
+
+@include big-desktop-up {
+  .container {
+    padding: 0 15%;
+  }
+
+  .text {
+    font-size: 25px;
+    width: 400px;
+  }
+}
+
 @include desktop {
+  .textContainer {
+    margin-right: 50px;
+  }
   .text {
     font-size: 20px;
     width: 300px;
@@ -29,24 +45,13 @@
   }
   .container {
     padding: 0 70px;
-  }
-
-  .text {
-    font-size: 20px;
-    font-weight: 300;
-    width: 300px;
-  }
-}
-
-@include tablet-portrait {
-  .text {
-    display: none;
-  }
-  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+  }
+  .text {
+    display: none;
   }
 }
 

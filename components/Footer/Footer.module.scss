@@ -1,13 +1,12 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-
 .footer {
   background-color: $primaryColor;
   color: $white;
   height: 100%;
   text-transform: uppercase;
-  padding: 30px 20px 0 20px;
+  padding: 30px 80px 0 80px;
 
   display: flex;
   bottom: 0;
@@ -62,9 +61,16 @@
   text-transform: capitalize;
 }
 
+@include big-desktop-up {
+  .footer {
+    padding: 30px 15% 0 15%;
+  }
+}
+
 @include tablet-landscape {
   .footer {
     font-size: 12px;
+    padding: 30px 60px 0 60px;
   }
 }
 
@@ -78,6 +84,9 @@
 }
 
 @include big-phone {
+  .footer {
+    padding: 30px 20px 0 20px;
+  }
 }
 
 @include phone {

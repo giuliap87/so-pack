@@ -32,6 +32,12 @@
   font-size: 80px;
 }
 
+@include big-desktop-up {
+  .container {
+    padding: 0 15%;
+  }
+}
+
 @include tablet-landscape {
 
   .container {

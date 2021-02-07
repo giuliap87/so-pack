@@ -16,6 +16,16 @@
   font-weight: 300;
 }
 
+@include big-desktop-up{
+.container {
+    padding: 0 15%;
+
+    .paragraph {
+      font-size: 25px;
+    }
+  }
+}
+
 @include tablet-landscape {
   .aboutSection {
     @include sectionStyleForSmallerScreen
