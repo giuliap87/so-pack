@@ -91,6 +91,12 @@
   opacity: 1;
 }
 
+@include big-desktop-up {
+  .container {
+    padding: 0 15%;
+  }
+}
+
 @include tablet-landscape {
   .container {
     padding: 0;
@@ -108,6 +114,9 @@
 @include tablet-portrait {
   .stepsContainer {
     grid-template-columns: repeat(2, 200px);
+  }
+  .processTitle {
+    left: 60px;
   }
 }
 
@@ -131,12 +140,6 @@
   }
 }
 
-@include big-desktop-up {
-  .container {
-    padding: 0 15%;
-  }
-}
-
 @include phone {
   .container {
     padding: 0 10px;
@@ -148,7 +151,7 @@
 
   .processTitle {
     font-size: 30px;
-    left: 0;
+    left: 30px;
   }
 
   .stepsContainer {
