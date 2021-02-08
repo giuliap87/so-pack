@@ -21,11 +21,19 @@
   background-color: transparent;
   border: none;
   color: $primaryColor;
-  transition: color 0.4s ease;
+
+  svg {
+    transition: all 0.4s ease;
+  }
 }
 
-.scrollDown:hover {
-  color: $primaryColorDark;
+.scrollDown:hover,
+.scrollDown:focus,
+.scrollDown:active {
+  svg {
+    transform: scale(1.2);
+    color: $primaryColor;
+  }
 }
 
 .scrollDown svg {
@@ -39,7 +47,6 @@
 }
 
 @include tablet-landscape {
-
   .container {
     padding: 0 70px;
   }

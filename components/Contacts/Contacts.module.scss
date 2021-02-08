@@ -24,7 +24,7 @@
     padding: 0 15%;
   }
 
-  .details { 
+  .details {
     font-size: 25px;
   }
 }
@@ -32,7 +32,6 @@
 @include tablet-landscape {
   .container {
     padding: 0 70px;
-    flex-direction: column;
     align-items: flex-start;
   }
   .contactsSection {
@@ -52,6 +51,10 @@
   .contactsSection {
     margin-top: 80px;
   }
+
+  .container {
+    flex-direction: column;
+  }
 }
 
 @include big-phone {
@@ -59,7 +62,7 @@
     padding: 0 60px;
   }
   .contactsSection {
-    margin-top: 50px;
+    margin-top: 150px;
   }
 }
 

@@ -16,10 +16,21 @@
 
 @include tablet-landscape {
   .map {
-    height: 350px;
-    width: 400px;
+    height: 300px;
+    width: 350px;
     margin-bottom: 100px;
   }
+}
+
+@include tablet-portrait {
+  .map {
+    height: 250px;
+    width: 300px;
+  }
+}
+
+@include big-phone {
+
 }
 
 @include phone {

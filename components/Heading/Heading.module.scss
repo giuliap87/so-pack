@@ -20,6 +20,10 @@
   .heading {
     font-size: 40px;
   }
+
+  .border {
+    width: 300px;
+  }
 }
 
 @include tablet-portrait {

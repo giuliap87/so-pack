@@ -26,7 +26,7 @@ function Packaging() {
         <title>So pack services - Packaging</title>
       </Head>
       <div style={{ minHeight: "calc(100vh - 70px)", display: "flex", flexDirection: "column" }}>
-        <Navbar secondary={secondary}/>
+        <Navbar/>
         <Description isOverlay={isOverlay}/>
         <Packing isOverlay={isOverlay} toggleOverlay={toggleOverlay} closeOverlay={closeOverlay}/>
       </div>

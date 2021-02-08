@@ -13,8 +13,8 @@
 .logo {
   position: absolute;
   top: 50%;
-  left: 48%;
-  transform: translate(-48%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 90px;
   width: 90px;
 }
@@ -27,17 +27,20 @@
   background-color: transparent;
   border: none;
   color: $black;
-  transition: color 0.4s ease;
-
+  
   svg {
     font-size: 80px;
+    transition: all 0.4s ease;
   }
 }
 
 .scrollDown:hover,
 .scrollDown:active,
 .scrollDown:focus {
-  color: $primaryColor;
+  svg {
+    transform: scale(1.2);
+    color: $black;
+  }
 }
 
 @include tablet-landscape {

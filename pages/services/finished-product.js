@@ -14,7 +14,7 @@ function FinishedProduct() {
         <title>So pack services - Finished Products</title>
       </Head>
       <div style={{ minHeight: "calc(100vh - 70px)" }}>
-        <Navbar secondary={secondary}/>
+        <Navbar/>
         <FinishedProductSection />
         <Process />
         <Footer />

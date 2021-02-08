@@ -15,7 +15,7 @@ const main = true;
       <Head>
         <title>Custom Made Perfumes</title>
       </Head>
-      <MainNavbar main={main}/>
+      <MainNavbar/>
       <HomePage />
       <About />
       <Service />

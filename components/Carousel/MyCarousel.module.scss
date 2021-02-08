@@ -45,9 +45,15 @@
 }
 
 @include tablet-portrait {
+  .carouselBig {
+    width: 100%;
+    margin: 0 auto;
+  }
   .carouselItemBig {
     h3 {
-      font-size: 18px;
+      font-size: 16px;
+      position: relative;
+      top: 50px;
     }
   }
 }
@@ -63,8 +69,6 @@
 @include phone {
   .carouselItemBig {
     h3 {
-      position: relative;
-      top: 50px;
       font-size: 11px;
     }
   }
