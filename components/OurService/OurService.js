@@ -19,7 +19,7 @@ const scale = {
 function OurService() {
   useEffect(() => {
     Aos.init({
-      duration: 1000,
+      duration: 800,
     });
   }, []);
 

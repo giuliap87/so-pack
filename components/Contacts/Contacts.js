@@ -12,7 +12,7 @@ import Aos from "aos";
 function Contacts() {
   useEffect(() => {
     Aos.init({
-      duration: 1000,
+      duration: 800,
     });
   }, []);
 

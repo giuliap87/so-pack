@@ -11,7 +11,7 @@ import Aos from "aos";
 function Products() {
   useEffect(() => {
     Aos.init({
-      duration: 1000,
+      duration: 800,
     });
   }, []);
   return (
