@@ -70,10 +70,23 @@
   .dropdownItem {
     text-align: center;
   }
+
+  .dropdownMenu {
+    margin-top: -40px;
+    margin-left: 140px;
+
+    div {
+      div {
+        margin-left: -140px;
+      }
+    }
+  }
 }
 
-@include big-phone{
+@include big-phone {
   .container {
     margin: 0 10px;
   }
 }
+
+
