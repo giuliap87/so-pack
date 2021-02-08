@@ -2,7 +2,6 @@ import styles from "./Packing.module.scss";
 import Card from "../Card/Card";
 import Overlay from "./Overlay";
 import { packagingComponentsInfo } from "../../info/info";
-
 import { useState } from "react";
 
 function Packing({ toggleOverlay, closeOverlay, isOverlay }) {

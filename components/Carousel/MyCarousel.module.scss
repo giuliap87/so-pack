@@ -4,12 +4,11 @@
 // carousel small
 
 .carouselSmall {
-  width: 400px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .carouselItemSmall {
-  height: 300px;
-  width: 400px;
   h3 {
     font-size: 22px;
   }
@@ -106,12 +105,12 @@
 
 @include phone {
   .carouselSmall {
-    width: 250px;
+    width: 220px;
   }
 
   .carouselItemSmall {
-    height: 150px;
-    width: 250px;
+    height: 130px;
+    width: 220px;
     h3 {
       font-size: 16px;
     }

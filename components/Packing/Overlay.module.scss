@@ -4,11 +4,10 @@
 .container {
   background-color: $white;
   @include card-box-shadow;
-  @include card-border-radius;
+  border-radius: 3px;
   position: fixed;
-  top: 10%;
-  padding: 30px 20px 0 20px;
-  margin: 60px 300px;
+  top: 20%;
+  padding: 40px 20px 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,8 +18,8 @@
 
 .closeBtn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
   background-color: transparent;
   height: 25px;
@@ -32,19 +31,24 @@
     border-radius: 50%;
     padding: 2px;
     color: $white;
+
+    transition: all .4s ease;
+  }
+
+  svg:hover, svg:focus, svg:active {
+    transform: scale(1.1);
   }
 }
 .description {
-  margin-top: 20px;
   font-size: 18px;
   text-align: center;
-  width: 50%;
+  width: 80%;
+  padding: 10px;
 }
 
 @include tablet-portrait {
   .container {
-    padding: 50px;
-    margin: 50px;
+    padding: 50px 30px 0 30px;
     width: 550px;
   }
 
@@ -55,7 +59,7 @@
 
 @include big-phone {
   .container {
-    top: 60px;
+    top: 15%;
     padding: 30px 30px;
     margin: auto;
     width: 400px;
@@ -63,13 +67,18 @@
   .description {
     font-size: 14px;
   }
+
+  .closeBtn {
+    top: 10px;
+    right: 10px;
+  }
 }
 
 @include phone {
   .container {
     top: 60px;
     padding: 40px 20px 0 20px;
-    width: 300px;
+    width: 280px;
     margin: 60px auto;
   }
   .description {
