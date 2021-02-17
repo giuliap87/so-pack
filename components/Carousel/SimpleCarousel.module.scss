@@ -1,0 +1,161 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.contentWrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+
+  img {
+    cursor: pointer;
+  }
+  p {
+    text-align: center;
+    font-size: 20px;
+    background-color: $lightGray;
+    padding-bottom: 5px;
+  }
+}
+
+/* hide scrollbar in webkit browser */
+.content::-webkit-scrollbar,
+.carousel-content::-webkit-scrollbar {
+  display: none;
+}
+
+.content > * {
+  flex-shrink: 0;
+  flex-grow: 1;
+  width: calc(100% / 3);
+}
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-90%);
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: rgba(177, 176, 176, 0.4);
+  color: $white;
+  border: none;
+
+  svg {
+    font-size: 40px;
+  }
+}
+
+.leftArrow {
+  left: 24px;
+}
+
+.rightArrow {
+  right: 24px;
+}
+
+.overlay {
+  @include card-box-shadow;
+  width: 600px;
+  border-radius: 3px;
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+
+  img {
+    border-radius: 3px;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  button {
+    border: none;
+    float: right;
+    border-radius: 50%;
+    margin-top: -5px;
+
+    svg {
+      height: 20px;
+      width: 20px;
+      background-color: rgba(177, 176, 176, 0.4);
+      border-radius: 50%;
+      color: $white;
+      transition: transform 0.4s ease;
+    }
+
+    svg:hover,
+    svg:focus,
+    svg:active {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .left-arrow,
+  .right-arrow {
+    display: none;
+  }
+}
+
+@include tablet-landscape {
+  .content > * {
+    width: 50%;
+  }
+}
+
+@include tablet-portrait {
+  .content > * {
+    width: 100%;
+  }
+
+  .overlay {
+    width: 500px;
+  }
+}
+
+@include big-phone {
+  .overlay {
+    width: 400px;
+     h4 {
+       font-size: 16px;
+     }
+  }
+}
+
+@include phone {
+  .overlay {
+    width: 300px;
+    top: 30%;
+  }
+}
