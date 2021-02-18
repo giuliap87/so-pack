@@ -112,8 +112,8 @@ function SimpleCarousel() {
           <button onClick={() => setOverlay(false)}>
             <CloseIcon />
           </button>
-          <h4>{productName}</h4>
           <img src={src} alt={productName} />
+          <h4>{productName}</h4>
         </motion.div>
       )}
       <div className={styles.wrapper}>
