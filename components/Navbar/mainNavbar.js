@@ -6,7 +6,6 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
-import { debounce } from "lodash";
 
 function NavigationBar() {
   const [position, setPosition] = useState("top");
@@ -21,11 +20,8 @@ function NavigationBar() {
       }
     };
 
-    // const debounceScroll = debounce(handleScrolling, 500);
     document.addEventListener("scroll", handleScrolling);
-    // () => {
-    //   return document.removeEventListener("scroll", handleScrolling);
-    // };
+    // return () => window.removeEventListener("scroll", handleScrolling);
   }, [position]);
 
   return (
@@ -53,17 +49,17 @@ function NavigationBar() {
               id="collasible-nav-dropdown"
               className={styles.dropdownMenu}
             >
-              <Link href="/services/packaging" passHref>
-                <NavDropdown.Item className={styles.dropdownItem}>
-                  Packaging Components
-                </NavDropdown.Item>
-              </Link>
               <Link href="/services/finished-product" passHref>
                 <NavDropdown.Item
                   href="/#product/finished product"
                   className={styles.dropdownItem}
                 >
-                  Finished Products
+                  Full Service Projects
+                </NavDropdown.Item>
+              </Link>
+              <Link href="/services/packaging" passHref>
+                <NavDropdown.Item className={styles.dropdownItem}>
+                  Packaging Components
                 </NavDropdown.Item>
               </Link>
             </NavDropdown>
