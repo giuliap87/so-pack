@@ -1,7 +1,7 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
-import theme from '../src/theme';
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ServerStyleSheets } from "@material-ui/core/styles";
+import theme from "../src/theme";
 
 export default class MyDocument extends Document {
   render() {
@@ -12,8 +12,18 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap" rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap"
+            rel="stylesheet"
           />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://entreprise.pole-emploi.fr/static/img/minisite/54VBbRc79IpUtsWEqL01BYI9tpDzZSqn.png"
+          />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="100" />
+          <meta property="og:image:height" content="100" />
+          <meta property="og:image:alt" content="company logo" />
         </Head>
         <body>
           <Main />
@@ -63,6 +73,9 @@ MyDocument.getInitialProps = async (ctx) => {
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+    styles: [
+      ...React.Children.toArray(initialProps.styles),
+      sheets.getStyleElement(),
+    ],
   };
 };

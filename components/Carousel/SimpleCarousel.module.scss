@@ -83,10 +83,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 200;
+  z-index: 2000;
   padding: 20px;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  filter: brightness(1);
 
   img {
     padding-top: 10px;

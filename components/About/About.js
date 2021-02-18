@@ -23,7 +23,7 @@ function About() {
           So pack is a perfumery and cosmetic manufacturing company based in
           Paris. We can realize your Made in France perfumes and create your own
           manufacturing company or we can manage the develoment of one or
-          several components for perfumery and cosmetic.
+          several components for perfumery and cosmetics.
         </motion.p>
       </motion.div>
     </section>

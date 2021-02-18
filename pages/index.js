@@ -6,15 +6,25 @@ import Service from "../components/OurService/OurService";
 import Products from "../components/Products/Products";
 import Contacts from "../components/Contacts/Contacts";
 import Footer from "../components/Footer/Footer";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <motion.div initial={{opacity: 0}} animate={{opacity:1, transition: {duration: .6}}} exit={{opacity: 0}}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 0.6 } }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
-        <title>Custom Made Perfumes</title>
+        <title>So pack - Custom Made Perfumes </title>
+        <meta
+          name="description"
+          key="description"
+          content="So pack is a perfumery and cosmetics manufacturing company based in Paris. We can realize your `Made in France` perfumes and create your own manufacturing company or we can manage the develoment of one or several components for perfumery and cosmetics. Take a look at what we offer!"
+        />
+        <meta property="og:title" key="og:title" content="So pack - Custom Made Perfumes" />
       </Head>
-      <MainNavbar/>
+      <MainNavbar />
       <HomePage />
       <About />
       <Service />

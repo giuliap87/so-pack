@@ -13,6 +13,7 @@ function Products() {
       duration: 800,
     });
   }, []);
+
   return (
     <section id="products" className={styles.productSection}>
       <div className={styles.container} data-aos="fade-up">
