@@ -19,6 +19,12 @@ function Products() {
     });
   }, []);
 
+  useEffect(() => {
+    overlay
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+  }, [overlay]);
+
   function showOverlay(e) {
     setSrc(e.target.src);
     setProductName(e.target.alt);
@@ -30,7 +36,7 @@ function Products() {
   }
 
   return (
-    <div style={{position: "relative"}}>
+    <div style={{ position: "relative" }}>
       <Overlay
         overlay={overlay}
         src={src}
