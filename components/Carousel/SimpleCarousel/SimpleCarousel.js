@@ -1,18 +1,13 @@
 import { useState, useEffect } from "react";
 import styles from "./SimpleCarousel.module.scss";
-import { products } from "../../info/info";
+import { products } from "../../../info/info";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import CloseIcon from "@material-ui/icons/Close";
-import { motion } from "framer-motion";
 
-function SimpleCarousel() {
+function SimpleCarousel({showOverlay}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(products.length);
   const [touchPosition, setTouchPosition] = useState(null);
-  const [overlay, setOverlay] = useState(false);
-  const [src, setSrc] = useState(null);
-  const [productName, setProductName] = useState("");
   const [show, setShow] = useState(3);
 
   useEffect(() => {
@@ -39,6 +34,7 @@ function SimpleCarousel() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
 
   function next() {
     if (currentIndex < length - show) {
@@ -76,46 +72,8 @@ function SimpleCarousel() {
     setTouchPosition(null);
   }
 
-  //overlay
-
-  function showOverlay(e) {
-    setSrc(e.target.src);
-    setProductName(e.target.alt);
-    setOverlay(true);
-  }
-
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        duration: 0.4,
-      },
-    },
-  };
   return (
     <div className={styles.container}>
-      {overlay && (
-        <motion.div
-          initial="hidden"
-          animate="show"
-          variants={fadeIn}
-          exit={{
-            opacity: 0,
-            transition: {
-              duration: 0.2,
-            },
-          }}
-          className={styles.overlay}
-          style={overlay && { opacity: 1 }}
-        >
-          <button onClick={() => setOverlay(false)}>
-            <CloseIcon />
-          </button>
-          <img src={src} alt={productName} />
-          <h4>{productName}</h4>
-        </motion.div>
-      )}
       <div className={styles.wrapper}>
         {currentIndex > 0 && (
           <button className={styles.leftArrow} onClick={prev}>
@@ -156,4 +114,3 @@ function SimpleCarousel() {
 }
 
 export default SimpleCarousel;
-
