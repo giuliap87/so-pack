@@ -1,0 +1,85 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  background-color: rgba($black, .4);
+  z-index: 10000;
+
+  .overlayContent {
+    width: 800px;
+    height: 300px;
+    @include card-box-shadow;
+    border-radius: 3px;
+    background-color: $white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease-in-out;
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    border-radius: 3px 0 0 3px;
+    height: 300px;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  button {
+    border: none;
+    border-radius: 50%;
+    margin-top: -5px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+
+    svg {
+      height: 25px;
+      width: 25px;
+      background-color: $white;
+      border-radius: 50%;
+      color: $lightGray;
+      transition: transform 0.4s ease;
+    }
+
+    svg:hover,
+    svg:focus,
+    svg:active {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@include tablet-portrait {
+  .overlay {
+    width: 500px;
+  }
+}
+
+@include big-phone {
+  .overlay {
+    width: 400px;
+    h4 {
+      font-size: 16px;
+    }
+  }
+}
+
+@include phone {
+  .overlay {
+    width: 300px;
+    top: 30%;
+  }
+}

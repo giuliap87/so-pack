@@ -22,7 +22,11 @@ export default function Home() {
           key="description"
           content="So pack is a perfumery and cosmetics manufacturing company based in Paris. We can realize your `Made in France` perfumes and create your own manufacturing company or we can manage the develoment of one or several components for perfumery and cosmetics. Take a look at what we offer!"
         />
-        <meta property="og:title" key="og:title" content="So pack - Custom Made Perfumes" />
+        <meta
+          property="og:title"
+          key="og:title"
+          content="So pack - Custom Made Perfumes"
+        />
       </Head>
       <MainNavbar />
       <HomePage />
