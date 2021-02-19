@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   backdrop-filter: blur(10px);
-  background-color: rgba($black, .4);
+  background-color: rgba($black, 0.4);
   z-index: 10000;
 
   .overlayContent {
@@ -39,17 +39,16 @@
 
   button {
     border: none;
-    border-radius: 50%;
     margin-top: -5px;
     position: absolute;
     top: 15px;
     right: 10px;
+    background-color: transparent;
 
     svg {
       height: 25px;
       width: 25px;
-      background-color: $white;
-      border-radius: 50%;
+      background-color: transparent;
       color: $lightGray;
       transition: transform 0.4s ease;
     }
@@ -64,22 +63,58 @@
 
 @include tablet-portrait {
   .overlay {
-    width: 500px;
+    .overlayContent {
+      width: 550px;
+      height: 200px;
+      img {
+        height: 200px;
+      }
+
+      button {
+        svg {
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
   }
 }
 
 @include big-phone {
   .overlay {
-    width: 400px;
-    h4 {
-      font-size: 16px;
+    .overlayContent {
+      width: 400px;
+      height: 150px;
+      img {
+        height: 150px;
+      }
+      h4 {
+        font-size: 16px;
+      }
     }
   }
 }
 
 @include phone {
   .overlay {
-    width: 300px;
-    top: 30%;
+    .overlayContent {
+      flex-direction: column;
+      width: 300px;
+      height: 190px;
+
+      button {
+        svg {
+          color: $white;
+        }
+      }
+
+      h4 {
+        margin: auto 0;
+      }
+
+      img {
+        width: 300px;
+      }
+    }
   }
 }
