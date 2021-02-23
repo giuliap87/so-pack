@@ -12,8 +12,7 @@
   z-index: 10000;
 
   .overlayContent {
-    width: 800px;
-    height: 300px;
+    width: 900px;
     @include card-box-shadow;
     border-radius: 3px;
     background-color: $white;
@@ -29,7 +28,7 @@
 
   img {
     border-radius: 3px 0 0 3px;
-    height: 300px;
+    width: 600px;
   }
 
   h4 {
@@ -61,23 +60,48 @@
   }
 }
 
+@include big-desktop-up {
+  .overlay {
+    .overlayContent {
+      width: 1000px img {
+        width: 800px;
+      }
+    }
+  }
+}
+
+@include tablet-landscape {
+  .overlay {
+    .overlayContent {
+      width: 800px;
+      img {
+        width: 500px;
+      }
+    }
+  }
+}
+
 @include tablet-portrait {
   .overlay {
     .overlayContent {
-      width: 550px;
-      height: 200px;
+      flex-direction: column;
+      width: 600px;
+      height: max-content;
 
       h4 {
         font-size: 16px;
+        padding: 10px;
       }
       img {
-        height: 200px;
+        width: 600px;
+        border-radius: 3px 3px 0 0;
       }
 
       button {
         svg {
           height: 18px;
           width: 18px;
+          color: $white;
         }
       }
     }
@@ -88,10 +112,6 @@
   .overlay {
     .overlayContent {
       width: 400px;
-      height: 150px;
-      img {
-        height: 150px;
-      }
       h4 {
         font-size: 14px;
       }
@@ -102,22 +122,10 @@
 @include phone {
   .overlay {
     .overlayContent {
-      flex-direction: column;
-      width: 300px;
-      height: 190px;
-
-      button {
-        svg {
-          color: $white;
-        }
-      }
-
-      h4 {
-        margin: auto 0;
-      }
+      width: 310px;
 
       img {
-        width: 300px;
+        width: 310px;
       }
     }
   }

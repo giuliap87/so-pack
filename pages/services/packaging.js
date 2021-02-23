@@ -9,16 +9,6 @@ import { motion } from "framer-motion";
 function Packaging() {
   const secondary = true;
 
-  const [isOverlay, setIsOverlay] = useState(false);
-
-  function toggleOverlay() {
-    setIsOverlay(!isOverlay);
-  }
-
-  function closeOverlay() {
-    setIsOverlay(false);
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -46,11 +36,8 @@ function Packaging() {
         }}
       >
         <Navbar />
-        <Description isOverlay={isOverlay} />
+        <Description/>
         <Packing
-          isOverlay={isOverlay}
-          toggleOverlay={toggleOverlay}
-          closeOverlay={closeOverlay}
         />
       </div>
       <Footer />

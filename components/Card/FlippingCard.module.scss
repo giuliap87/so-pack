@@ -56,15 +56,37 @@
 }
 
 .cardBack {
+  // background: linear-gradient(90deg, $primaryColorDark 0%, $primaryColor 77%);
   background-color: $primaryColor;
   color: $white;
   transform: rotateY(180deg);
   text-align: center;
   display: flex;
   align-items: center;
+  padding: 10px;
 
   p {
     font-size: 16px;
+  }
+}
+
+@include big-desktop-up {
+  .card {
+    width: 300px;
+    height: 400px;
+
+    .cardFront {
+      button {
+        padding: 9px;
+      }
+    }
+
+    .cardBack {
+      padding: 10px;
+      p {
+        font-size: 18px;
+      }
+    }
   }
 }
 
