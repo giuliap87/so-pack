@@ -29,7 +29,7 @@ function FinishProduct() {
         <motion.p className={styles.description} variants={item}>
           We manage the entire manufactoring process, from design and packaging
           conception to the filling and delivery. Thanks to our filling factory
-          in the east of France, which specialized in luxury perfumery, we can
+          in the east of France, which is specialized in luxury perfumery, we can
           control and guarantee the quality of our products even during the last
           phase of manufactoring process. <span> Here is what we do:</span>
         </motion.p>
