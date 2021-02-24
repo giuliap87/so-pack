@@ -1,41 +1,21 @@
 import styles from "./Packing.module.scss";
-import Card from "../Card/Card";
-import Overlay from "./Overlay";
+import Card from "../Card/FlippingCard";
 import { packagingComponentsInfo } from "../../info/info";
-import { useState } from "react";
 
-function Packing({ toggleOverlay, closeOverlay, isOverlay }) {
-  const [cardId, setCardId] = useState(0);
-  function setOverlay(e) {
-    setCardId(e.target.id);
-    toggleOverlay();
-  }
-  function close() {
-    closeOverlay();
-  }
+function Packing() {
   return (
     <div className={styles.container}>
-      <div
-        className={styles.cardsContainer}
-        style={isOverlay ? { filter: "blur(5px)" } : {}}
-      >
+      <div className={styles.cardsContainer}>
         {packagingComponentsInfo.map((card) => (
           <Card
             className={styles.card}
             key={card.service}
             id={card.id}
             title={card.service}
-            setOverlay={setOverlay}
+            description={card.description}
           />
         ))}
       </div>
-      {isOverlay && (
-        <Overlay
-          close={close}
-          description={packagingComponentsInfo[cardId].description}
-          images={packagingComponentsInfo[cardId].images}
-        />
-      )}
     </div>
   );
 }

@@ -7,44 +7,32 @@ const contacts = {
 const packagingComponentsInfo = [
   {
     id: 0,
-    service: "Consulting",
+    service: "consulting",
     description:
       "We offer professional consultations and manage the development of one of several components of perfumery of cosmetic.",
-    images: [
-      { id: 0, name: "Item 1", description: "", src: "/images/0.png" },
-      { id: 1, name: "Item 2", description: "", src: "/images/1.png" },
-    ],
+    img: "/images/packaging/consulting.jpg"
   },
   {
     id: 1,
-    service: "Bottle",
+    service: "bottle",
     description:
       "According to client's need and its market, we can customize our European standard bottles or develop a specific mold for your project.",
-    images: [
-      { id: 2, name: "Item 3", description: "", src: "/images/2.png" },
-      { id: 3, name: "Item 4", description: "", src: "/images/3.png" },
-    ],
-  },
+      img: "/images/packaging/bottle.jpg"
+    },
   {
     id: 2,
-    service: "Caps",
+    service: "caps",
     description:
       "According to client's need and its market, we can customize our European standard bottles or develop a specific mold for your project.",
-    images: [
-      { id: 4, name: "Item 5", description: "", src: "/images/4.png" },
-      { id: 0, name: "Item 6", description: "", src: "/images/0.png" },
-    ],
-  },
+      img: "/images/packaging/consulting1.jpg"
+    },
   {
     id: 3,
-    service: "Packaging",
+    service: "packaging",
     description:
       "According to client's need and its market, we can customize our European standard bottles or develop a specific mold for your project.",
-    images: [
-      { id: 2, name: "Item 7", description: "", src: "/images/2.png" },
-      { id: 1, name: "Item 8", description: "", src: "/images/1.png" },
-    ],
-  },
+      img: "/images/packaging/packaging.jpg"
+    },
 ];
 
 const processInfo = [

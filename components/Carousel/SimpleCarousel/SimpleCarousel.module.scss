@@ -37,8 +37,7 @@
 }
 
 /* hide scrollbar in webkit browser */
-.content::-webkit-scrollbar,
-.carousel-content::-webkit-scrollbar {
+.content::-webkit-scrollbar {
   display: none;
 }
 
@@ -74,8 +73,6 @@
   right: 24px;
 }
 
-
-
 // @media (hover: none) and (pointer: coarse) {
 //   .leftArrow,
 //   .rightArrow {
@@ -100,10 +97,14 @@
 }
 
 @include big-phone {
-  .overlay {
-    width: 400px;
-    h4 {
-      font-size: 16px;
+  .leftArrow,
+  .rightArrow {
+    width: 30px;
+    height: 30x;
+    background-color: transparent;
+
+    svg {
+      font-size: 28px;
     }
   }
 }
