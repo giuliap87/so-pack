@@ -7,7 +7,7 @@ function FlippingCard({ title, id, description }) {
         <div
           className={styles.cardFront}
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/images/${id}.png)`,
+            backgroundImage: `linear-gradient(rgba(277,32,32,.8), rgba(255,255,255,.2)), url(/images/packaging/${title}.jpg)`,
           }}
         >
           <h4 className={styles.cardHeading}>{title}</h4>

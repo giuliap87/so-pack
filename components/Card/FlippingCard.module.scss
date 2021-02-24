@@ -25,6 +25,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .card:hover .inner {
@@ -42,6 +43,7 @@
 
 .cardFront {
   color: $white;
+  background-size: cover;
   button {
     background-color: $primaryColor;
     border: none;
