@@ -7,7 +7,6 @@ import Footer from "../../components/Footer/Footer";
 import { motion } from "framer-motion";
 
 function Packaging() {
-  const secondary = true;
 
   return (
     <motion.div
@@ -27,6 +26,7 @@ function Packaging() {
           key="og:title"
           content="So pack - Custom Made Perfumes | Our Services"
         />
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <div
         style={{

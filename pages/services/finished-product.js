@@ -25,6 +25,7 @@ function FinishedProduct() {
           key="og:title"
           content="So pack - Custom Made Perfumes | Our Services"
         />
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <div style={{ minHeight: "calc(100vh - 70px)" }}>
         <Navbar />
