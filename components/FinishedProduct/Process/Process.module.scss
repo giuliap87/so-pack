@@ -58,8 +58,8 @@
   background-image: linear-gradient(
       rgba(277, 32, 32, 0.2),
       rgba(277, 32, 32, 0.9)
-    ),
-    url() !important;
+    ) !important;
+  filter: drop-shadow(2px 4px 6px black);
 
   transition: all 0.4s ease-in-out;
 }
