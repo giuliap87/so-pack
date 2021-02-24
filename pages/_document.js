@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
           <meta property="og:image:width" content="100" />
           <meta property="og:image:height" content="100" />
           <meta property="og:image:alt" content="company logo" />
+          
         </Head>
         <body>
           <Main />

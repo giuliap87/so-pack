@@ -56,6 +56,7 @@ export default function MyApp(props) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
