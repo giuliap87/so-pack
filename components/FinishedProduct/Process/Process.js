@@ -20,9 +20,18 @@ function Process() {
         </h1>
         <div className={styles.stepsContainer}>
           {processInfo.map((step, i) => (
-            <div className={styles.step} key={step.title}>
+            <div
+              className={styles.step}
+              key={step.title}
+              style={{
+                backgroundImage: `linear-gradient(rgba(257,32,32, .2),rgba(277,32,32,.9)), url(${step.img})`,
+              }}
+            >
               <h4 className={styles.title}>
-                <span style={{position: "absolute", top: 0}}> {`${i + 1} `}</span>
+                <span style={{ position: "absolute", top: 0 }}>
+                  {" "}
+                  {`${i + 1} `}
+                </span>
                 <br />
                 {` ${step.title}`}
               </h4>
@@ -36,4 +45,3 @@ function Process() {
 }
 
 export default Process;
-
