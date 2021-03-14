@@ -3,8 +3,9 @@ import styles from "./SimpleCarousel.module.scss";
 import { products } from "../../../info/info";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import Image from "next/image";
 
-function SimpleCarousel({showOverlay}) {
+function SimpleCarousel({ showOverlay }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(products.length);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -34,7 +35,6 @@ function SimpleCarousel({showOverlay}) {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
 
   function next() {
     if (currentIndex < length - show) {
@@ -92,11 +92,16 @@ function SimpleCarousel({showOverlay}) {
             }}
           >
             {products.map((product) => (
-              <div key={product.name}>
-                <img
+              <div
+                key={product.name}
+                style={{ display: "flex", flexDirection: "column" }}
+              >
+                <Image
                   src={product.src}
                   alt={product.name}
                   onClick={showOverlay}
+                  width={1900}
+                  height={1108}
                 />
                 <p>{product.name}</p>
               </div>
