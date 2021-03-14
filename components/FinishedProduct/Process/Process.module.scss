@@ -56,11 +56,12 @@
 .step[style]:active {
   background-color: $primaryColor !important;
   background-image: linear-gradient(
-      rgba(277, 32, 32, 0.2),
-      rgba(277, 32, 32, 0.9)
-    ) !important;
-  filter: drop-shadow(2px 4px 6px black);
+    rgba(277, 32, 32, 0.2),
+    rgba(277, 32, 32, 0.9)
+  ) !important;
 
+  box-shadow: 0px 0px 11px -1px rgba($black, 0.3);
+  transform: scale(1.02);
   transition: all 0.4s ease-in-out;
 }
 
@@ -151,6 +152,10 @@
     grid-template-columns: repeat(6, 200px);
     overflow-x: auto;
     padding: 0 20px 0 850px;
+  }
+
+  .step {
+    margin-bottom: 10px;
   }
 }
 

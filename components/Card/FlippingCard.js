@@ -11,7 +11,6 @@ function FlippingCard({ title, id, description }) {
           }}
         >
           <h4 className={styles.cardHeading}>{title}</h4>
-          <button>Learn more</button>
         </div>
         <div className={`${styles.cardBack} ${styles.side}`}>
           <div className={styles.backContent}>

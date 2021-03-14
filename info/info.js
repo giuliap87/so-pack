@@ -2,7 +2,7 @@ const contacts = {
   name: "SoPack",
   address: "Address: Rue blabla, 1234 Paris - France",
   phone: "0348-593094",
-  email: "sopack@gmail.com",
+  email: "sopack@email.com",
 };
 const packagingComponentsInfo = [
   {
