@@ -3,8 +3,8 @@ import React from "react";
 import styles from "./GoogleMap.module.scss";
 
 const center = {
-  lat: -3.745,
-  lng: -38.523,
+  lat: 48.8566,
+  lng: 2.3522,
 };
 
 function Map() {
@@ -29,7 +29,7 @@ function Map() {
     <GoogleMap
       mapContainerClassName={styles.map}
       center={center}
-      zoom={10}
+      zoom={8}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
